@@ -1,0 +1,164 @@
+/*
+Author: Courtney Ardis 
+Project: Web App Part 4
+Term: 1207
+*/
+
+/* This css file is linked to index.html and addItem.html */
+/* Code is in logical order based on the addItem.html page */
+/* Section comments indicate where the selectors come from even though the style applies to all elements on the page(s) in which the stylesheet is linked */
+
+/* everything on both the index.html and addItem.html page is styled with the properties below*/
+*{
+	font-family: Arial, Helvetica, serif;
+}
+
+/* body element on both the index.html and addItem.hmtl page */
+body{
+	background-color: #999;
+	letter-spacing: .07em;
+	word-wrap: break-word;
+}
+
+/* h1 element with id="addComic" on the addItem.html page */
+#addComic{
+	text-align: center;
+	background-color: #D3D3D3;
+	border: 2px groove threedface;
+	padding: 10px;
+	margin: 10px 0px;
+}
+
+/* h1 element on the index.html page */
+h1{
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+#errors{
+	color: red;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-bottom: 15px;
+	text-indent: -70px;
+}
+
+#required{
+	font-size: 7pt;
+	margin-bottom: 15px;
+	color: red;
+}
+
+/* fieldset element within the comicForm on the addItem.html page */
+fieldset{
+	background-color: #D3D3D3;
+}
+
+/* legend element within the fieldset on the addItem.html page */
+legend{
+	background-color: #eee;
+	color: green;
+	font-weight: bold;
+	font-size: 18px;
+	border: 1px solid grey;
+	box-shadow: 5px 5px 5px #888;
+}
+
+/* ul element with a class="mainUl" on the addItem.html page */
+.mainUl{
+	list-style: none;
+	text-indent: -30px;
+}
+
+/* range input element with id="rateIssue" on the addItem.html page */
+#rangeValue, #rateIssue {
+	display: inline;
+}
+
+.label, .input {
+	display: block;
+}
+
+#deleteA {
+	display: block;
+}
+
+/* div element within the header element on the index.html page */
+/* div element which is dynamically created by JavaScript to display data on the addItem.html page */
+div{
+	margin-bottom: 5px;
+}
+
+/* li element with the class="illStyle" on the addItem.html page  */
+.illStyle {
+	text-indent: -45px;
+	margin: 3px 0px;
+}
+
+/* textarea element with an id="comments" on the addItem.html page  */
+#comments {
+	vertical-align: text-top;
+	display: block;
+}
+
+/* BEGIN SOURCE: css-tricks.com/examples/ButtonMaker/ */
+/* tags with the class="button" on the addItem.html page */
+.button {
+	margin-bottom: 10px;
+	margin-top: 10px;
+   	border-top: 1px solid #72f76b;
+	background: #8ad166;
+	background: -webkit-gradient(linear, left top, left bottom, from(#157a1a), to(#8ad166));
+	background: -webkit-linear-gradient(top, #157a1a, #8ad166);
+	background: -moz-linear-gradient(top, #157a1a, #8ad166);
+	background: -ms-linear-gradient(top, #157a1a, #8ad166);
+	background: -o-linear-gradient(top, #157a1a, #8ad166);
+	padding: 4px 10px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	color: #1c211c;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.button:hover {
+   background: #287828;
+   color: #f5f5f5;
+}
+
+.button:active {
+   background: #2b5c1b;
+}
+/* END SOURCE */
+
+/* ul element within div element which is dynamically created by JavaScript to display data on the addItem.html page */
+div ul{
+    float: left;
+    list-style-type: none;
+    margin: 5px 0px;
+    padding: 0px;
+}
+
+/* li element within ul element within div element which is dynamically created by JavaScript to display data on the addItem.html page */
+div ul li {
+    list-style-type: none;
+}
+
+/*Horizontal line after each item*/
+hr{
+	float: left;
+    height: 12px;
+    width: 300px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+/* a element with an id="addNew" on the addItem.html page */
+#addNew{
+	display: none;
+}
