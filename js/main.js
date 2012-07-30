@@ -1,7 +1,7 @@
 /*
 Author: Courtney Ardis 
-Project: Web App Part 4
-Term: 1207
+Project: MiU Project 1
+Term: 1208
 */
 
 //This javascript file is linked to addItem.html
