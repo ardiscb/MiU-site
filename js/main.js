@@ -250,14 +250,14 @@ window.addEventListener("DOMContentLoaded", function() {
 	//Function that validates input fields
 	function validate(t){
 		//Define the elements we want to check
-		var getComicTitle 	= e('comicTitle');
+		var getComicSeries 	= e('seriesTitle');
 		var getIssueNum 	= e('issueNum');
 		var getPublisher 	= e('publisher');
 		var getGenre 		= e('genre');
 
 		//Reset Error Messages
 		errMsg.innerHTML = "";
-		getComicTitle.style.border = "2px inset";
+		getComicSeries.style.border = "2px inset";
 		getIssueNum.style.border = "2px inset";
 		getPublisher.style.border = "2px inset";
 		getGenre.style.border = "2px inset";
@@ -265,10 +265,10 @@ window.addEventListener("DOMContentLoaded", function() {
 		//Get Error Messages
 		var messageArray = [];
 		//Comic Title Validation
-		if(getComicTitle.value === ""){
-			var comicTitleError = "Please enter a comic title.";
-			getComicTitle.style.border = "1px solid red";
-			messageArray.push(comicTitleError);
+		if(getComicSeries.value === ""){
+			var comicSeriesError = "Please enter a comic series.";
+			getComicSeries.style.border = "1px solid red";
+			messageArray.push(comicSeriesError);
 		}
 		//Issue Number Validation
 
