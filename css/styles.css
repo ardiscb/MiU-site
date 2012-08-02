@@ -1,7 +1,7 @@
 /*
 Author: Courtney Ardis 
-Project: MiU Project 1
-Term: 1208
+Project: Web App Part 4
+Term: 1207
 */
 
 /* This css file is linked to index.html and addItem.html */
@@ -18,21 +18,33 @@ body{
 	background-color: #999;
 	letter-spacing: .07em;
 	word-wrap: break-word;
+	line-height: 25px;
+}
+
+.section {
+	background-color: #D3D3D3;
+	border: 2px groove threedface;
+	padding: 0px 5px;
+	margin: 10px 0px;
+}
+
+.browseGenre{
+	display: block;
+}
+
+h3{
+	background-color: #999;
+
 }
 
 /* h1 element with id="addComic" on the addItem.html page */
+/* h1 element with class="indexH1" on the index.html page */
 #addComic{
 	text-align: center;
 	background-color: #D3D3D3;
 	border: 2px groove threedface;
 	padding: 10px;
 	margin: 10px 0px;
-}
-
-/* h1 element on the index.html page */
-h1{
-	text-align: center;
-	border-bottom: 1px solid black;
 }
 
 #errors{
@@ -83,11 +95,7 @@ legend{
 	display: block;
 }
 
-/* div element within the header element on the index.html page */
 /* div element which is dynamically created by JavaScript to display data on the addItem.html page */
-div{
-	margin-bottom: 5px;
-}
 
 /* li element with the class="illStyle" on the addItem.html page  */
 .illStyle {

@@ -237,6 +237,3 @@ var json = {
 		"comments": ["Comments:", "Batman cover"]
 	}
 }
-
-
-

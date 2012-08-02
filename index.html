@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
 Author: Courtney Ardis 
-Project: MiU Project 1
-Term: 1208
+Project: Web App Part 4
+Term: 1207
 -->
 <html>
 	<head>
@@ -16,9 +16,32 @@ Term: 1208
 	</head>
 	<body>
 		<header>
-			<h1>Comic Book Collection</h1>
-			<div>Keep track of your comic book collection</div>
+			<!-- Insert CTA image here -->
+			<img src="" alt="CTA" />
+			<!--Take the below description and put it on the CTA image
+			<div>Keep track of your comic book collection</div>-->
 		</header>
-		<a id="link" href="addItem.html">Add Comic</a>
+		<nav>
+			<!-- Local Storage Nav Elements -->
+			<a href="#" id="clearData">Clear Data</a>
+			<a href="#" id="displayData">Display Data</a>
+			<a href="addItem.html" id="addNew">Add New Comic</a>		
+			<a id="link" href="addItem.html">Add Comic</a>
+		</nav>
+		<div class="section">
+			<h3>Search by keyword:</h3>
+			<input type="text" id="search" /><input type="button" value="Search" id="searchBtn" />
+		</div>
+		<div class="section">
+			<h3>Browse by genre:</h3>
+			<a href="" class="browseGenre" id="Superhero">Superhero</a>
+			<a href="" class="browseGenre" id="Horror">Horror</a>
+			<a href="" class="browseGenre" id="Sci-Fi">Sci-Fi</a>
+			<a href="" class="browseGenre" id="Western">Western</a>
+			<a href="" class="browseGenre" id="Romance">Romance</a>
+		</div>
+
+		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/json.js" type="text/javascript"></script>
 	</body>
 </html>

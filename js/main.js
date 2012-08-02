@@ -1,7 +1,7 @@
 /*
 Author: Courtney Ardis 
-Project: MiU Project 1
-Term: 1208
+Project: Web App Part 4
+Term: 1207
 */
 
 //This javascript file is linked to addItem.html
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		return theElement;
 	}
 	//Variable defaults
-	var comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-fi", "Western", "Romance"],
+	var comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-Fi", "Western", "Romance"],
 		styleValue,
 		errMsg = e('errors');
 
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			makeSelect.appendChild(makeOption);
 		}
 		selectLi.appendChild(makeSelect);
-	}
+	};
 	
 	//Find value of the selected radio button for the storeData function
 	function getSelectedRadio(){
@@ -250,14 +250,14 @@ window.addEventListener("DOMContentLoaded", function() {
 	//Function that validates input fields
 	function validate(t){
 		//Define the elements we want to check
-		var getComicSeries 	= e('seriesTitle');
+		var getComicTitle 	= e('comicTitle');
 		var getIssueNum 	= e('issueNum');
 		var getPublisher 	= e('publisher');
 		var getGenre 		= e('genre');
 
 		//Reset Error Messages
 		errMsg.innerHTML = "";
-		getComicSeries.style.border = "2px inset";
+		getComicTitle.style.border = "2px inset";
 		getIssueNum.style.border = "2px inset";
 		getPublisher.style.border = "2px inset";
 		getGenre.style.border = "2px inset";
@@ -265,10 +265,10 @@ window.addEventListener("DOMContentLoaded", function() {
 		//Get Error Messages
 		var messageArray = [];
 		//Comic Title Validation
-		if(getComicSeries.value === ""){
-			var comicSeriesError = "Please enter a comic series.";
-			getComicSeries.style.border = "1px solid red";
-			messageArray.push(comicSeriesError);
+		if(getComicTitle.value === ""){
+			var comicTitleError = "Please enter a comic title.";
+			getComicTitle.style.border = "1px solid red";
+			messageArray.push(comicTitleError);
 		}
 		//Issue Number Validation
 
@@ -315,5 +315,64 @@ window.addEventListener("DOMContentLoaded", function() {
 	clearLink.addEventListener("click", clearLocal);
 	var save = e('submit');
 	save.addEventListener("click", validate);
+
+
+	//Search
+	var search = e('searchBtn');
+
+
+	var getSearch = function(){
+		// var category = e('genre').value;
+		var term = e('search').value;
+
+		// //Search by Category Only
+		// if(category != "--Choose A Genre--" && term === ""){
+		// 	for(i=0, j=localStorage.length; i<j; i++){
+		// 		var key = localStorage.key(i);
+		// 		var value = localStorage.getItem(key);
+		// 		var item = JSON.parse(value);
+		// 		if(category === item.genre[1]){
+		// 			for (n in item){
+		// 				console.log(item[n][1]);
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+		//Search by Term Only
+		if(term !== ""){
+			for(i=0, j=localStorage.length; i<j; i++){
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var item = JSON.parse(value);
+				for(n in item){
+					if(term === item[n][1]){
+						for(q in item){
+							console.log(item[q][1]);
+						}
+					}
+				}
+			}
+		}
+	};
+		// //Search by BOTH Category AND Term
+		// if(term !== "" && category !== "--Choose A Genre--"){
+		// 	for(i=0, j=localStorage.length; i<j; i++){
+		// 		var key = localStorage.key(i);
+		// 		var value = localStorage.getItem(key);
+		// 		var item = JSON.parse(value);
+		// 		for(n in item){
+		// 			if(term === item[n][1] && category === item.genre[1]){
+		// 				for(q in item){
+		// 					console.log(item[q][1]);
+		// 				}
+		// 			}
+		// 		}	
+		// 	}
+		// }
+
+
+	search.addEventListener("click", getSearch);
+
 
 });
