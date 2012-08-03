@@ -21,6 +21,7 @@ body{
 	line-height: 25px;
 }
 
+/* elements with class="section" */
 .section {
 	background-color: #D3D3D3;
 	border: 2px groove threedface;
@@ -28,6 +29,7 @@ body{
 	margin: 10px 0px;
 }
 
+/* elements with class="browseGenre" */
 .browseGenre{
 	display: block;
 	text-align: center;
@@ -43,11 +45,12 @@ body{
     border-left: 1px solid #CCCCCC;
 }
 
+/* elements with class="browse" */
 .browse{
 	border: 3px solid green;
 	padding: 7px;
 }
-
+/* h3 elements on the index.html page*/
 h3{
 	background-color: #999;
 	height: 40px;
@@ -62,6 +65,7 @@ h3{
 	margin: 10px 0px;
 }
 
+/* ul element with the id="errors" on the addItem.html page */
 #errors{
 	color: red;
 	font-size: 10pt;
@@ -70,6 +74,7 @@ h3{
 	text-indent: -70px;
 }
 
+/* li element with the id="required" on the addItem.html page */
 #required{
 	font-size: 7pt;
 	margin-bottom: 15px;
@@ -102,15 +107,15 @@ legend{
 	display: inline;
 }
 
+/* elements with the class="label" and class="input" on the addItem.page */
 .label, .input {
 	display: block;
 }
 
+/* a element with the id="deleteA" dynamically created on the addItem.html page with JavaScript */
 #deleteA {
 	display: block;
 }
-
-/* div element which is dynamically created by JavaScript to display data on the addItem.html page */
 
 /* li element with the class="illStyle" on the addItem.html page  */
 .illStyle {
