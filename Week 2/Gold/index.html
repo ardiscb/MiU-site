@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+Author: Courtney Ardis 
+Project: MiU Project 2
+Term: 1208
+-->
+<html>
+	<head>
+		<meta charset ="utf-8" />
+		<meta name="description" content="Keep track of your comic book collection" />
+		<meta name="keywords" content="comic books, list, keep track, add comics, store comic titles" />
+		<meta name="robots" content="noindex, nofollow" />
+		<title>Comic Book Indexer</title>
+
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+<!-- 		<link href="css/styles.css" rel="stylesheet" /> -->
+		
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	</head>
+	<body>
+
+	<!-- Home page	 -->
+		<div data-role="page" id="home">
+			<!-- Header -->
+			<div data-role="header" data-position="fixed">
+				<h1>Comic Book Indexer</h1>
+				<img src="images/CTA.png" alt="CTA" />
+				<div data-role="navbar">
+					<ul>
+						<li><a href="addItem.html" data-icon="plus">Add Comic</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Content -->
+			<div data-role="content">
+				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Superhero</a></p>
+				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Horror</a></p>
+				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Sci-Fi</a></p>
+				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Western</a></p>
+				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Romance</a></p>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<h4>&copy Courtney Ardis</h4>
+			</div>
+		</div>
+	<!-- End Home page -->	
+
+<!-- 		<nav>
+			<a href="#" id="clearData">Clear Data</a>
+			<a href="#" id="displayData">Display Data</a>
+			<a href="addItem.html" id="addNew">Add New Comic</a>		
+			<a id="link" href="addItem.html">Add Comic</a>
+		</nav> 
+		<div class="section">
+			<h3>Search by keyword:</h3>
+			<div class="browse" align="center">
+				<input type="text" id="search" /><input type="button" value="Search" id="searchBtn" />
+			</div>
+		</div> 
+
+		<div class="section">
+			<h3>Browse by genre:</h3>
+			<nav class="browse">
+-->				<!--
+				Browse not functioning.  I didn't give myself enough time to get better
+				at creating sub-pages with JavaScript. I will fix it for next week.
+				Each link opens to a construction page.
+				-->
+<!-- 				<a href="construction.html" class="browseGenre" id="Superhero">Superhero</a>
+				<a href="construction.html" class="browseGenre" id="Horror">Horror</a>
+				<a href="construction.html" class="browseGenre" id="Sci-Fi">Sci-Fi</a>
+				<a href="construction.html" class="browseGenre" id="Western">Western</a>
+				<a href="construction.html" class="browseGenre" id="Romance">Romance</a>
+			</nav>
+		</div>
+ -->
+
+	 	<!-- JavaScript under here -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/json.js" type="text/javascript"></script>
+	</body>
+</html>
