@@ -1,6 +1,6 @@
 /*
 Author: Courtney Ardis 
-Project: MiU Project 1
+Project: MiU Project 2
 Term: 1208
 */
 
