@@ -1,10 +1,10 @@
 /*
 Author: Courtney Ardis 
-Project: Web App Part 4
-Term: 1207
+Project: MiU Project 2
+Term: 1208
 */
 
-/* This css file is linked to index.html and addItem.html */
+/* This css file is linked to index.html, addItem.html and construction.html*/
 /* Code is in logical order based on the addItem.html page */
 /* Section comments indicate where the selectors come from even though the style applies to all elements on the page(s) in which the stylesheet is linked */
 
@@ -18,6 +18,42 @@ body{
 	background-color: #999;
 	letter-spacing: .07em;
 	word-wrap: break-word;
+	line-height: 25px;
+}
+
+/* elements with class="section" */
+.section {
+	background-color: #D3D3D3;
+	border: 2px groove threedface;
+	padding: 0px 2px 5px 2px;
+	margin: 10px 0px;
+}
+
+/* elements with class="browseGenre" */
+.browseGenre{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15pt;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+/* elements with class="browse" */
+.browse{
+	border: 3px solid green;
+	padding: 7px;
+}
+/* h3 elements on the index.html page*/
+h3{
+	background-color: #999;
+	height: 40px;
 }
 
 /* h1 element with id="addComic" on the addItem.html page */
@@ -29,12 +65,7 @@ body{
 	margin: 10px 0px;
 }
 
-/* h1 element on the index.html page */
-h1{
-	text-align: center;
-	border-bottom: 1px solid black;
-}
-
+/* ul element with the id="errors" on the addItem.html page */
 #errors{
 	color: red;
 	font-size: 10pt;
@@ -43,6 +74,7 @@ h1{
 	text-indent: -70px;
 }
 
+/* li element with the id="required" on the addItem.html page */
 #required{
 	font-size: 7pt;
 	margin-bottom: 15px;
@@ -75,18 +107,14 @@ legend{
 	display: inline;
 }
 
+/* elements with the class="label" and class="input" on the addItem.page */
 .label, .input {
 	display: block;
 }
 
+/* a element with the id="deleteA" dynamically created on the addItem.html page with JavaScript */
 #deleteA {
 	display: block;
-}
-
-/* div element within the header element on the index.html page */
-/* div element which is dynamically created by JavaScript to display data on the addItem.html page */
-div{
-	margin-bottom: 5px;
 }
 
 /* li element with the class="illStyle" on the addItem.html page  */

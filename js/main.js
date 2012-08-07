@@ -1,7 +1,7 @@
 /*
 Author: Courtney Ardis 
-Project: Web App Part 4
-Term: 1207
+Project: MiU Project 2
+Term: 1208
 */
 
 //This javascript file is linked to addItem.html
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		return theElement;
 	}
 	//Variable defaults
-	var comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-fi", "Western", "Romance"],
+	var comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-Fi", "Western", "Romance"],
 		styleValue,
 		errMsg = e('errors');
 
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			makeSelect.appendChild(makeOption);
 		}
 		selectLi.appendChild(makeSelect);
-	}
+	};
 	
 	//Find value of the selected radio button for the storeData function
 	function getSelectedRadio(){
@@ -315,5 +315,97 @@ window.addEventListener("DOMContentLoaded", function() {
 	clearLink.addEventListener("click", clearLocal);
 	var save = e('submit');
 	save.addEventListener("click", validate);
+
+
+	//Browse (not functioning)
+	//There is a better way to do this. 
+	//I couldn't wrap my head around it this week.
+/*	var superheroLink = e('Superhero');
+	superheroLink.addEventListener("click", getSuperhero);
+	var horrorLink = e('Horror');
+	horrorLink.addEventListener("click", getHorror);
+	var westernLink = e('Western');
+	westernLink.addEventListener("click", getWestern);
+	var romanceLink = e('Romance');
+	romanceLink.addEventListener("click", getRomance);
+	var scifiLink = e('Sci-Fi');
+	scifiLink.addEventListener("click", getSciFi);
+
+	var getSuperhero = {
+
+	};
+
+	var getHorror = {
+
+	};
+
+	var getWestern = {
+
+	};
+
+	var getRomance = {
+
+	};
+
+	 var getSciFi = {
+
+	 };
+*/
+	//Search (not functioning)
+	var search = e('searchBtn');
+
+	var getSearch = function(){
+		// var category = e('genre').value;
+		var term = e('search').value;
+
+/*		//Search by Category Only
+		if(category != "--Choose A Genre--" && term === ""){
+			for(i=0, j=localStorage.length; i<j; i++){
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var item = JSON.parse(value);
+				if(category === item.genre[1]){
+					for (n in item){
+						console.log(item[n][1]);
+					}
+				}
+			}
+		}*/
+
+		//Search by Term Only
+		if(term !== ""){
+			for(i=0, j=localStorage.length; i<j; i++){
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var item = JSON.parse(value);
+				for(n in item){
+					if(term === item[n][1]){
+						for(q in item){
+							console.log(item[q][1]);
+						}
+					}
+				}
+			}
+		}
+	};
+/*		//Search by BOTH Category AND Term
+		if(term !== "" && category !== "--Choose A Genre--"){
+			for(i=0, j=localStorage.length; i<j; i++){
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var item = JSON.parse(value);
+				for(n in item){
+					if(term === item[n][1] && category === item.genre[1]){
+						for(q in item){
+							console.log(item[q][1]);
+						}
+					}
+				}	
+			}
+		}*/
+
+
+	search.addEventListener("click", getSearch);
+
 
 });
