@@ -21,49 +21,6 @@ body{
 	line-height: 25px;
 }
 
-/* elements with class="section" */
-.section {
-	background-color: #D3D3D3;
-	border: 2px groove threedface;
-	padding: 0px 2px 5px 2px;
-	margin: 10px 0px;
-}
-
-/* elements with class="browseGenre" */
-.browseGenre{
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	font-size: 15pt;
-    text-decoration: none;
-    background-color: #EEEEEE;
-    color: #333333;
-    padding: 2px 6px 2px 6px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #CCCCCC;
-}
-
-/* elements with class="browse" */
-.browse{
-	border: 3px solid green;
-	padding: 7px;
-}
-/* h3 elements on the index.html page*/
-h3{
-	background-color: #999;
-	height: 40px;
-}
-
-/* h1 element with id="addComic" on the addItem.html page */
-#addComic{
-	text-align: center;
-	background-color: #D3D3D3;
-	border: 2px groove threedface;
-	padding: 10px;
-	margin: 10px 0px;
-}
 
 /* ul element with the id="errors" on the addItem.html page */
 #errors{
@@ -71,7 +28,7 @@ h3{
 	font-size: 10pt;
 	font-weight: bold;
 	margin-bottom: 15px;
-	text-indent: -70px;
+	list-style: none;
 }
 
 /* li element with the id="required" on the addItem.html page */
@@ -79,32 +36,6 @@ h3{
 	font-size: 7pt;
 	margin-bottom: 15px;
 	color: red;
-}
-
-/* fieldset element within the comicForm on the addItem.html page */
-fieldset{
-	background-color: #D3D3D3;
-}
-
-/* legend element within the fieldset on the addItem.html page */
-legend{
-	background-color: #eee;
-	color: green;
-	font-weight: bold;
-	font-size: 18px;
-	border: 1px solid grey;
-	box-shadow: 5px 5px 5px #888;
-}
-
-/* ul element with a class="mainUl" on the addItem.html page */
-.mainUl{
-	list-style: none;
-	text-indent: -30px;
-}
-
-/* range input element with id="rateIssue" on the addItem.html page */
-#rangeValue, #rateIssue {
-	display: inline;
 }
 
 /* elements with the class="label" and class="input" on the addItem.page */
@@ -117,55 +48,14 @@ legend{
 	display: block;
 }
 
-/* li element with the class="illStyle" on the addItem.html page  */
-.illStyle {
-	text-indent: -45px;
-	margin: 3px 0px;
-}
-
 /* textarea element with an id="comments" on the addItem.html page  */
 #comments {
 	vertical-align: text-top;
 	display: block;
 }
 
-/* BEGIN SOURCE: css-tricks.com/examples/ButtonMaker/ */
-/* tags with the class="button" on the addItem.html page */
-.button {
-	margin-bottom: 10px;
-	margin-top: 10px;
-   	border-top: 1px solid #72f76b;
-	background: #8ad166;
-	background: -webkit-gradient(linear, left top, left bottom, from(#157a1a), to(#8ad166));
-	background: -webkit-linear-gradient(top, #157a1a, #8ad166);
-	background: -moz-linear-gradient(top, #157a1a, #8ad166);
-	background: -ms-linear-gradient(top, #157a1a, #8ad166);
-	background: -o-linear-gradient(top, #157a1a, #8ad166);
-	padding: 4px 10px;
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	border-radius: 50px;
-	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-	box-shadow: rgba(0,0,0,1) 0 1px 0;
-	text-shadow: rgba(0,0,0,.4) 0 1px 0;
-	color: #1c211c;
-	font-size: 12px;
-	vertical-align: middle;
-}
-
-.button:hover {
-   background: #287828;
-   color: #f5f5f5;
-}
-
-.button:active {
-   background: #2b5c1b;
-}
-/* END SOURCE */
-
 /* ul element within div element which is dynamically created by JavaScript to display data on the addItem.html page */
-div ul{
+#items{
     float: left;
     list-style-type: none;
     margin: 5px 0px;
