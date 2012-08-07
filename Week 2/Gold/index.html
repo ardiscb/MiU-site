@@ -36,29 +36,158 @@ Term: 1208
 	<!-- Home page	 -->
 		<div data-role="page" id="home">
 			<!-- Header -->
-			<div data-role="header" data-position="fixed">
+			<div data-role="header" align="center" >
 				<h1>Comic Book Indexer</h1>
+				<!-- Resize CTA image to be a bit smaller -->
 				<img src="images/CTA.png" alt="CTA" />
+				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
-						<li><a href="addItem.html" data-icon="plus">Add Comic</a></li>
+						<li><a href="#addItem" data-icon="plus">Add Comic</a></li>
 					</ul>
 				</div>
 			</div>
 			<!-- Content -->
 			<div data-role="content">
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Superhero</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Horror</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Sci-Fi</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Western</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Romance</a></p>
+				<form action="#" method="post">
+					<h2>Search</h2>
+					<input type="search" name="search" id="search-basic" value="" />
+				</form>
+				<div data-role="collapsible-set" data-theme="a">
+					<h2>Browse</h2>
+					<!--Horror -->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Horror</h3>
+					<div></div>	<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outrè horror<p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Horror Comics</a>
+						<!-- <span class="ui-li-count">6</span> -->
+					</div>
+					<!--Romance-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Romance</h3>
+						<p>Comics depicting romantic love and its attendant complications such as jealousy, marriage, divorce, betrayal, and heartache</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Romance Comics</a>
+					</div>
+					<!--Sci-Fi-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Sci-Fi</h3>
+						<p>Comics that often mock or satirize standard science fiction conventions like alien invasion of Earth, interstellar travel, or futuristic technology</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Sci-Fi Comics</a>
+					</div>
+					<!--Superhero-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Superhero</h3>
+						<p>Comics with a type of stock character possessing "extraordinary or superhuman powers" and dedicated to protecting the public</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Superhero Comics</a>
+					</div>
+					<!--Western-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Western</h3>
+						<p>Comics set in the American Old West frontier (usually anywhere west of the Mississippi River) and typically set during the late nineteenth century</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Western Comics</a>
+					</div>
+				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed">
+			<div data-role="footer" data-position="fixed" data-id="home">
 				<h4>&copy Courtney Ardis</h4>
 			</div>
 		</div>
 	<!-- End Home page -->	
+
+	<!-- Add Item page -->
+	<div data-role="page" id="addItem">
+		<!-- Header -->
+		<div data-role="header" align="center" data-position="fixed">
+			<h1 id="addComic">Add Comic</h1>			
+			<div data-role="navbar">
+				<!-- Local Storage Nav Elements -->
+				<a href="#" id="clearData">Clear Data</a>
+				<a href="#" id="displayData">Display Data</a>
+				<a href="#addItem" id="addNew">Add New Comic</a>
+				<a href="#home"id="search">Home</a>
+			</div>
+		</div>
+		<!-- Add Comic Form -->
+		<div>
+			<form action="#" method="post" id="comicForm" data-ajax="false">
+					<div class="mainUl">
+						<!-- Comic Information Inputs -->
+						<div data-role="fieldcontain" id="required"><small>*required fields</small></div>
+						<div id="errors"></div>
+						<div data-role="fieldcontain"><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" /></div>
+						<div data-role="fieldcontain"><label for="seriesTitle" class="label">Title of Series:</label><input type="text" id="seriesTitle" /></div>
+						<div data-role="fieldcontain"><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" /></div>
+						<div data-role="fieldcontain"><label for="dateReleased" class="label">Date Released:</label><input type="date" id="dateReleased" /></div>
+						<div data-role="fieldcontain"><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" /></div>
+						<div data-role="fieldcontain"><label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label><input type="range" id="rateIssue" min="0" max="5" onchange="rangeValue.value=value" /></div>
+		 				<!--Genre Dropdown Menu-->
+		 				<div data-role="fieldcontain" id="select"><label for="genre" class="label">*Select Genre:</label></div> 
+						<!--REPLACED so JavaScript can create the menu dynamically
+							<select id="genre">
+								<option>Superhero</option>
+								<option>Horror</option>
+								<option>Sci-fi</option>
+								<option>Western</option>
+								<option>Romance</option>
+							</select>
+						-->				
+						<div data-role="fieldcontain">Illustration Style:
+							<div data-role="fieldcontain" class="mainUl">
+								<!-- Illustration Radio Buttons -->
+								<div class="illStyle"><input type="radio" id="fullColor" value="Full Color" name="illStyle" /><label for="fullColor">Full Color</label></div>
+								<div class="illStyle"><input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" /><label for="blackWhite">Black &amp; White</label></div>
+								<div class="illStyle"><input type="radio" id="combination" value="Combination" name="illStyle" /><label for="combination">Combination</label></div>
+							</div>
+						</div>
+						<!-- Comment Textarea -->
+						<div data-role="fieldcontain">
+							<label for="comments">Comments:</label>
+							<textarea id="comments"></textarea>
+						</div>
+					</div>		
+				<!-- Submit Elements -->
+				<div data-theme="a">			
+					<input class="button" type="submit" value="Add Comic" id="submit" />
+				</div>	
+			</form>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<h4>&copy Courtney Ardis</h4>
+			</div>			
+		</div>
+	</div>					
+
+	<!-- End Add Item page -->
+
+
+	<!-- Construction page -->
+
+		<div data-role="page" id="construction">
+			<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<img src="images/error.png" alt="Orange triangle with an exclamation mark in the middle" />
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="index.html"id="search">Home</a></li>
+						<li><a id="link" href="addItem.html">Add Comic</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<p>This page is under construction. We apologize for any inconvenience this may cause you. </p>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<h4>&copy Courtney Ardis</h4>
+			</div>
+
+		</div>
+
+	<!-- End Construction page -->
 
 	 	<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
