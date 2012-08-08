@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Author: Courtney Ardis 
+Project: MiU Project 1
+Term: 1208
+-->
+<html>
+	<head>
+		<meta charset ="utf-8" />
+		<meta name="description" content="Keep track of your comic book collection" />
+		<meta name="keywords" content="comic books, list, keep track, add comics, store comic titles" />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, target-densitydpi=device-dpi" />
+		<title>Add Comic to Collection</title>
+		<link href="css/styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1 id="addComic">Add Comic</h1>			
+		<header>
+			<nav>
+				<!-- Local Storage Nav Elements -->
+				<a href="#" id="clearData">Clear Data</a>
+				<a href="#" id="displayData">Display Data</a>
+				<a href="addItem.html" id="addNew">Add New Comic</a>
+				<a href="index.html"id="search">Search</a>
+			</nav>
+		</header>
+		<!-- Add Comic Form -->
+		<form action="#" method="post" id="comicForm">
+			<fieldset>
+				<legend>Comic Information</legend>
+					<ul class="mainUl">
+						<!-- Comic Information Inputs -->
+						<li id="required">*required fields</li>
+						<ul id="errors"></ul>
+						<li><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" /></li>
+						<li><label for="seriesTitle" class="label">Title of Series:</label><input type="text" id="seriesTitle" /></li>
+						<li><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" /></li>
+						<li><label for="dateReleased" class="label">Date Released:</label><input type="date" id="dateReleased" /></li>
+						<li><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" /></li>
+						<li><label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label><input type="range" id="rateIssue" min="0" max="5" onchange="rangeValue.value=value" /><output id="rangeValue"></output></li>
+		 				<!--Genre Dropdown Menu-->
+		 				<li id="select"><label for="genre" class="label">*Select Genre:</label></li> 
+						<!--REPLACED so JavaScript can create the menu dynamically
+							<select id="genre">
+								<option>Superhero</option>
+								<option>Horror</option>
+								<option>Sci-fi</option>
+								<option>Western</option>
+								<option>Romance</option>
+							</select>
+						-->				
+						<li>Illustration Style:
+							<ul class="mainUl">
+								<!-- Illustration Radio Buttons -->
+								<li class="illStyle"><input type="radio" id="fullColor" value="Full Color" name="illStyle" /><label for="fullColor">Full Color</label></li>
+								<li class="illStyle"><input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" /><label for="blackWhite">Black &amp; White</label></li>
+								<li class="illStyle"><input type="radio" id="combination" value="Combination" name="illStyle" /><label for="combination">Combination</label></li>
+							</ul>
+						</li>
+						<!-- Comment Textarea -->
+						<li><label for="comments">Comments:</label><textarea id="comments"></textarea></li>
+					</ul>		
+			</fieldset>
+			<!-- Submit Elements -->			
+			<input class="hide" type="hidden" name="country" value="USA" />
+			<input class="button" type="submit" value="Add Comic" id="submit" />	
+		</form>					
+
+		<script src="js/main.js" type="text/javascript"></script>		
+		<script src="js/json.js" type="text/javascript"></script>
+	</body>
+</html>
