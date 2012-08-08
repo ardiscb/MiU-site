@@ -62,6 +62,10 @@ body{
     padding: 0px;
 }
 
+form {
+	margin: 15px;
+}
+
 /* li element within ul element within div element which is dynamically created by JavaScript to display data on the addItem.html page */
 div ul li {
     list-style-type: none;
