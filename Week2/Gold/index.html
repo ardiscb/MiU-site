@@ -39,66 +39,208 @@ Term: 1208
 			<div data-role="header" align="center" >
 				<h1>Comic Book Indexer</h1>
 				<img src="images/CTA.png" alt="CTA" />
-				<!-- Nav Bar -->
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#addItem" data-icon="plus">Add Comic</a></li>
-					</ul>
-				</div>
 			</div>
 			<!-- Content -->
 			<div data-role="content">
-				<!-- Search -->
-				<form action="#" method="post">
-					<h2>Search</h2>
-					<input type="search" name="search" id="search-basic" value="" />
-				</form>
+					
 				<div data-role="collapsible-set" data-theme="a">
 					<h2>Browse</h2>
 					<!--Horror -->
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Horror</h3>
-					<div></div>	<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outrè horror<p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true"><img src="images/horrorBrowse.png" alt="Superhero icon" class="ui-li-icon" align="left" />Browse Horror Comics</a>
-						<!-- <span class="ui-li-count">6</span> -->
-					</div>
-					<!--Romance-->
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Romance</h3>
-						<p>Comics depicting romantic love and its attendant complications such as jealousy, marriage, divorce, betrayal, and heartache</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Romance Comics</a>
-					</div>
-					<!--Sci-Fi-->
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Sci-Fi</h3>
-						<p>Comics that often mock or satirize standard science fiction conventions like alien invasion of Earth, interstellar travel, or futuristic technology</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Sci-Fi Comics</a>
-					</div>
-					<!--Superhero-->
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Superhero</h3>
-						<p>Comics with a type of stock character possessing "extraordinary or superhuman powers" and dedicated to protecting the public</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Superhero Comics</a>
-					</div>
-					<!--Western-->
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Western</h3>
-						<p>Comics set in the American Old West frontier (usually anywhere west of the Mississippi River) and typically set during the late nineteenth century</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Western Comics</a>
-					</div>
+					<ul data-filter="true" data-role="listview">
+						<li>
+							<a href="#horror" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Horror</a>
+						</li>
+						<!--Romance-->
+						<li>
+							<a href="#romance" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Romance</a>
+						</li>
+						<!--Sci-Fi-->
+						<li>
+							<a href="#scifi" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Sci-Fi</a>
+						</li>
+						<!--Superhero-->
+						<li>
+							<a href="#superhero" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Superhero</a>
+						</li>
+						<!--Western-->
+						 <li>
+							<a href="#western" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Western</a>
+						</li>
+					</ul> 
 				</div>
 			</div>
 			<!-- Footer -->
 			<div data-role="footer" data-position="fixed" data-id="home">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#home" id="home">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a href="#about" id="about">About</a></li>
+						<li><a href="./Bronze/index.html">Bronze</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	<!-- End Home page -->	
+
+	<!-- Horror page -->
+
+		<div data-role="page" id="horror">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Horror</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Horror</h3>
+					<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outrè horror<p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Horror Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Horror page -->
+
+	<!-- Romance page -->
+
+		<div data-role="page" id="romance">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Romance</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Romance</h3>
+					<p>Comics depicting romantic love and its attendant complications such as jealousy, marriage, divorce, betrayal, and heartache</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Romance Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Romance page -->
+
+	<!-- Sci-Fi page -->
+
+		<div data-role="page" id="scifi">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Sci-Fi</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Sci-Fi</h3>
+					<p>Comics that often mock or satirize standard science fiction conventions like alien invasion of Earth, interstellar travel, or futuristic technology</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Sci-Fi Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Sci-Fi page -->
+
+	<!-- Superhero page -->
+
+		<div data-role="page" id="superhero">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Superhero</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Superhero</h3>
+					<p>Comics with a type of stock character possessing "extraordinary or superhuman powers" and dedicated to protecting the public</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Superhero Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Superhero page -->		
+
+	<!-- Western page -->
+
+		<div data-role="page" id="western">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Sci-Fi</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Western</h3>
+					<p>Comics set in the American Old West frontier (usually anywhere west of the Mississippi River) and typically set during the late nineteenth century</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Western Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Western page -->			
 
 	<!-- About page -->
 
@@ -119,8 +261,9 @@ Term: 1208
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
-						<li><a href="index.html"id="search">Home</a></li>
+						<li><a href="#home" id="search">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -134,13 +277,6 @@ Term: 1208
 		<!-- Header -->
 		<div data-role="header" align="center" data-position="fixed">
 			<h1 id="addComic">Add Comic</h1>			
-			<div data-role="navbar">
-				<!-- Local Storage Nav Elements -->
-				<a href="#" id="clearData">Clear Data</a>
-				<a href="#" id="displayData">Display Data</a>
-				<a href="#addItem" id="addNew">Add New Comic</a>
-				<a href="#home"id="search">Home</a>
-			</div>
 		</div>
 		<!-- Add Comic Form -->
 		<div>
@@ -187,7 +323,16 @@ Term: 1208
 			</form>
 			<!-- Footer -->
 			<div data-role="footer" data-position="fixed" data-id="home">
-				<h4>&copy Courtney Ardis</h4>
+				<div data-role="navbar">
+					<ul>
+						<!-- Local Storage Nav Elements -->
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a href="#dataDisplay" id="displayData">Display Data</a></li>
+						<li><a href="#" id="clearData">Clear Data</a></li>
+						<li><a href="#about" id="about">About</a></li>
+						<li display="none"><a href="#addItem" id="addNew">Add New Comic</a></li>
+					</ul>
+				</div>
 			</div>			
 		</div>
 	</div>					
@@ -199,20 +344,36 @@ Term: 1208
 	<div data-role="page" id="dataDisplay">
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" align="center">
+			<h4>Saved Comics</h4>
 		</div>
 		<!-- Content -->
 		<div data-role="content" id="data">
-			
+	
+			<!-- Search (Newstream?) -->
+
+<!--
+			<form action="#" method="post">
+				<label for="search">Search</label>
+				<input type="search" name="search" id="search-basic" value="" />
+			</form>
+-->
+
+
 		</div>
+		
 		<!-- Footer -->
 		<div data-role="footer" data-position="fixed" data-id="home">
 			<!-- Nav Bar -->
+
 			<div data-role="navbar">
 				<ul>
-					<li><a href="index.html"id="search">Home</a></li>
+					<li><a href="#home"id="search">Home</a></li>
 					<li><a id="link" href="#addItem">Add Comic</a></li>
+					<li><a href="#" id="clearData">Clear Data</a></li>
+					<li><a href="#about" id="about">About</a></li>
 				</ul>
 			</div>
+
 		</div>
 
 	</div>
@@ -236,8 +397,9 @@ Term: 1208
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
-						<li><a href="index.html"id="search">Home</a></li>
-						<li><a id="link" href="addItem.html">Add Comic</a></li>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
 					</ul>
 				</div>
 			</div>

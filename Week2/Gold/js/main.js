@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function() {
 				e('clearData').style.display = "inline";
 				e('displayData').style.display = "inline";
 				e('addNew').style.display = "none";
-				e('data').style.display = "none";
+				e('dataDisplay').style.display = "none";
 				break;
 			default:
 				return false;
@@ -95,6 +95,15 @@ window.addEventListener("DOMContentLoaded", function() {
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Comic saved to index!");
 	}
+	
+	//Get the image for the right category
+	function getImage(catName, makeSubList){
+		var imageLi = document.createElement('li');
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement('img');
+		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
+		imageLi.appendChild(newImg);
+	}
 
 	//Function that displays the data that has been saved into Local Storage
 	function getData(){
@@ -104,12 +113,14 @@ window.addEventListener("DOMContentLoaded", function() {
 			autoFillData();
 		}
 		//Write Data from Local Storage to the browser
-		var makeDiv = document.getElementById('dataDisplay');
-		makeDiv.setAttribute("id", "data");
+		var makeDiv = document.getElementById('data');
+/*
+		makeDiv.setAttribute("id", "dataD");
+*/
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
-		e('data').style.display = "block";
+		e('dataDisplay').style.display = "block";
 		for(var i=0, j=localStorage.length; i<j; i++){
 			var makeLi = document.createElement('li');
 			var linksLi = document.createElement('li');
@@ -131,16 +142,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			makeItemLinks(localStorage.key(i), linksLi);//Function call for our edit and delete buttons/links
 		}
 	}
-
-	//Get the image for the right category
-	function getImage(catName, makeSubList){
-		var imageLi = document.createElement('li');
-		makeSubList.appendChild(imageLi);
-		var newImg = document.createElement('img');
-		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
-		imageLi.appendChild(newImg);
-	}
-
+	
 	//Auto Popluate Local Storage
 	function autoFillData(){
 		//The actual JSON OBJECT data required for this to work is coming from our json.js file, which is loaded from our HTML page
@@ -188,8 +190,10 @@ window.addEventListener("DOMContentLoaded", function() {
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
 
+		
 		//Show the form
 		toggleControls("off");
+
 
 		//populate the form fields with current Local Storage values
 		e('comicTitle').value 	= item.comicTitle[1];
@@ -308,7 +312,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	makeGenre();
 
 	//Set Link and Submit Click Events
-	var displayLink = e('displayData');
+	var displayLink = e('dataDisplay');
 	displayLink.addEventListener("click", getData);
 	var clearLink = e('clearData');
 	clearLink.addEventListener("click", clearLocal);

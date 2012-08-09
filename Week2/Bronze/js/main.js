@@ -352,11 +352,13 @@ window.addEventListener("DOMContentLoaded", function() {
 	 };
 */
 	//Search (not functioning)
+/*
 	var search = e('searchBtn');
 
 	var getSearch = function(){
 		// var category = e('genre').value;
 		var term = e('search').value;
+*/
 
 /*		//Search by Category Only
 		if(category != "--Choose A Genre--" && term === ""){
@@ -373,6 +375,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}*/
 
 		//Search by Term Only
+/*
 		if(term !== ""){
 			for(i=0, j=localStorage.length; i<j; i++){
 				var key = localStorage.key(i);
@@ -388,6 +391,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 	};
+*/
 /*		//Search by BOTH Category AND Term
 		if(term !== "" && category !== "--Choose A Genre--"){
 			for(i=0, j=localStorage.length; i<j; i++){
@@ -405,7 +409,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}*/
 
 
-	search.addEventListener("click", getSearch);
+/* 	search.addEventListener("click", getSearch); */
 
 
 });

@@ -30,29 +30,58 @@ Term: 1208
 	</head>
 	<body>
 
-	<!-- Home page	 -->
+		<!-- Home page	-->
 		<div data-role="page" id="home">
 			<!-- Header -->
-			<div data-role="header" data-position="fixed">
+			<div data-role="header" align="center" >
 				<h1>Comic Book Indexer</h1>
 				<img src="images/CTA.png" alt="CTA" />
-				<div data-role="navbar">
-					<ul>
-						<li><a href="addItem.html" data-icon="plus">Add Comic</a></li>
-					</ul>
-				</div>
 			</div>
 			<!-- Content -->
 			<div data-role="content">
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Superhero</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Horror</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Sci-Fi</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Western</a></p>
-				<p><a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right">Romance</a></p>
+				<div data-role="collapsible-set" data-theme="a">
+					<h2>Browse by genre:</h2>
+					<!--Horror -->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Horror</h3>
+						<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outrè horror<p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Horror Comics</a>
+						<!-- <span class="ui-li-count">6</span> -->
+					</div>
+					<!--Romance-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Romance</h3>
+						<p>Comics depicting romantic love and its attendant complications such as jealousy, marriage, divorce, betrayal, and heartache</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Romance Comics</a>
+					</div>
+					<!--Sci-Fi-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Sci-Fi</h3>
+						<p>Comics that often mock or satirize standard science fiction conventions like alien invasion of Earth, interstellar travel, or futuristic technology</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Sci-Fi Comics</a>
+					</div>
+					<!--Superhero-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Superhero</h3>
+						<p>Comics with a type of stock character possessing "extraordinary or superhuman powers" and dedicated to protecting the public</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Superhero Comics</a>
+					</div>
+					<!--Western-->
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Western</h3>
+						<p>Comics set in the American Old West frontier (usually anywhere west of the Mississippi River) and typically set during the late nineteenth century</p>
+						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Western Comics</a>
+					</div>
+				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed">
-				<h4>&copy Courtney Ardis</h4>
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a id="link" href="addItem.html" data-ajax="false">Add Comic</a></li>
+						<li><a href=".../Gold/index.html">Gold</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	<!-- End Home page -->	
