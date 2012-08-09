@@ -32,7 +32,8 @@ Term: 1208
 	
 	</head>
 	<body>
-
+	
+	<!-- SOURCE: Used Wikipedia for genre descriptions (better verbage) -->
 	<!-- Home page	 -->
 		<div data-role="page" id="home">
 			<!-- Header -->
@@ -46,7 +47,7 @@ Term: 1208
 				<div data-role="collapsible-set" data-theme="a">
 					<h2>Browse</h2>
 					<!--Horror -->
-					<ul data-filter="true" data-role="listview">
+					<ul data-filter="true" data-filter-placeholder="Search genres..." data-role="listview">
 						<li>
 							<a href="#horror" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Horror</a>
 						</li>
@@ -75,12 +76,41 @@ Term: 1208
 					<ul>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a href="#about" id="about">About</a></li>
+						<li><a href="#newstream" id="newstream">Newstream</a></li>
 						<li><a href="./Bronze/index.html">Bronze</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-	<!-- End Home page -->	
+	<!-- End Home page -->
+
+	<!-- Newstream page -->
+
+		<div data-role="page" id="newstream">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Newstream</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!--End Newstream page -->	
 
 	<!-- Horror page -->
 
@@ -94,7 +124,7 @@ Term: 1208
 			<div data-role="content">
 				<div data-role="collapsible" data-collapsed="true">
 					<h3>Horror</h3>
-					<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outrè horror<p>
+					<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outre horror<p>
 					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Horror Comics</a>
 				</div>
 			</div>
@@ -254,7 +284,8 @@ Term: 1208
 
 			<!-- Content -->
 			<div data-role="content">
-				<p>My name is Courtney Ardis. </p>
+				<p>My name is Courtney Ardis. This is my <a href="http://ardiscb.github.com/MiU-site/Week2/Gold">Gold App</a> and this is my <a href="http://ardiscb.github.com/MiU-site/Week2/Bronze">Bronze App</a>
+				</p>
 			</div>
 			<!-- Footer -->
 			<div data-role="footer" data-position="fixed" data-id="home">
@@ -264,6 +295,7 @@ Term: 1208
 						<li><a href="#home" id="search">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a href="#about" id="about">About</a></li>
+						<li><a href="#newstream" id="newstream">Newstream</a></li>
 					</ul>
 				</div>
 			</div>
@@ -348,16 +380,6 @@ Term: 1208
 		</div>
 		<!-- Content -->
 		<div data-role="content" id="data">
-	
-			<!-- Search (Newstream?) -->
-
-<!--
-			<form action="#" method="post">
-				<label for="search">Search</label>
-				<input type="search" name="search" id="search-basic" value="" />
-			</form>
--->
-
 
 		</div>
 		
@@ -400,6 +422,8 @@ Term: 1208
 						<li><a href="#home" id="search">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a href="#about" id="about">About</a></li>
+						<li><a href="#newstream" id="newstream">Newstream</a></li>
+						<li><a href="./Bronze/index.html">Bronze</a></li>						
 					</ul>
 				</div>
 			</div>
