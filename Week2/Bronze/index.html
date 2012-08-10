@@ -22,7 +22,7 @@ Term: 1208
 		
 		<!-- StyleSheets under here -->
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-<!-- 		<link href="css/styles.css" rel="stylesheet" /> -->
+		<link href="css/styles.css" rel="stylesheet" />
 		
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
@@ -40,82 +40,164 @@ Term: 1208
 			<!-- Content -->
 			<div data-role="content">
 				<div data-role="collapsible-set" data-theme="a">
-					<h2>Browse by genre:</h2>
+					<h2>Browse</h2>
 					<!--Horror -->
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Horror</h3>
-						<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outrè horror<p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Horror Comics</a>
-						<!-- <span class="ui-li-count">6</span> -->
+						<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outre horror<p>
+						<a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true"><img align="left" src="images/horrorBrowse.png" alt="horror icon"/>Browse Horror Comics</a>
 					</div>
 					<!--Romance-->
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Romance</h3>
 						<p>Comics depicting romantic love and its attendant complications such as jealousy, marriage, divorce, betrayal, and heartache</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Romance Comics</a>
+						<a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true"><img align="left" src="images/romanceBrowse.png" alt="romance icon"/>Browse Romance Comics</a>
 					</div>
 					<!--Sci-Fi-->
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Sci-Fi</h3>
 						<p>Comics that often mock or satirize standard science fiction conventions like alien invasion of Earth, interstellar travel, or futuristic technology</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Sci-Fi Comics</a>
+						<a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true"><img align="left" src="images/scifiBrowse.png" alt="scifi icon"/>Browse Sci-Fi Comics</a>
 					</div>
 					<!--Superhero-->
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Superhero</h3>
 						<p>Comics with a type of stock character possessing "extraordinary or superhuman powers" and dedicated to protecting the public</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Superhero Comics</a>
+						<a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true"><img align="left" src="images/superheroBrowse.png" alt="superhero icon"/>Browse Superhero Comics</a>
 					</div>
 					<!--Western-->
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Western</h3>
 						<p>Comics set in the American Old West frontier (usually anywhere west of the Mississippi River) and typically set during the late nineteenth century</p>
-						<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Western Comics</a>
+						<a href="construction.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true"><img align="left" src="images/westernBrowse.png" alt="western icon"/>Browse Western Comics</a>
 					</div>
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="bronze">
 				<div data-role="navbar">
 					<ul>
 						<li><a id="link" href="addItem.html" data-ajax="false">Add Comic</a></li>
-						<li><a href=".../Gold/index.html">Gold</a></li>
+						<li><a id="about" href="#about">About</a></li>
+						<li><a href="#newstream" id="newstream">Newstream</a></li>
+						<li><a href="../Gold/index.html">Gold</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-	<!-- End Home page -->	
+	<!-- End Home page -->
+	
+	<!-- Newstream page -->
 
-<!-- 		<nav>
-			<a href="#" id="clearData">Clear Data</a>
-			<a href="#" id="displayData">Display Data</a>
-			<a href="addItem.html" id="addNew">Add New Comic</a>		
-			<a id="link" href="addItem.html">Add Comic</a>
-		</nav> 
-		<div class="section">
-			<h3>Search by keyword:</h3>
-			<div class="browse" align="center">
-				<input type="text" id="search" /><input type="button" value="Search" id="searchBtn" />
+		<div data-role="page" id="newstream">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Comic Newstream</h1>
 			</div>
-		</div> 
 
-		<div class="section">
-			<h3>Browse by genre:</h3>
-			<nav class="browse">
--->				<!--
-				Browse not functioning.  I didn't give myself enough time to get better
-				at creating sub-pages with JavaScript. I will fix it for next week.
-				Each link opens to a construction page.
-				-->
-<!-- 				<a href="construction.html" class="browseGenre" id="Superhero">Superhero</a>
-				<a href="construction.html" class="browseGenre" id="Horror">Horror</a>
-				<a href="construction.html" class="browseGenre" id="Sci-Fi">Sci-Fi</a>
-				<a href="construction.html" class="browseGenre" id="Western">Western</a>
-				<a href="construction.html" class="browseGenre" id="Romance">Romance</a>
-			</nav>
+			<!-- Content -->
+			<div data-role="content">
+				<!-- Hard code newstream here or enter rss feed -->
+				<!-- Thumbnail + Text -->
+				<ul data-filter="true" data-filter-placeholder="Search newstream..." data-role="listview">
+					<li>
+						<div class="ui-grid-solo">
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">April 7, 2009 - Avengers 2 expected release date revealed</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ui-grid-solo">
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">May 10, 2009 - Marvel unveils Matt Fraction's Fantastic Four's New Teams and New Look</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ui-grid-solo">
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">July 15, 2010 - First look at Avengers vs. X-Men #10</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ui-grid-solo">
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">October 14, 2010 - New Marvel NOW! Deadpool #1 Details and Artwork Revealed</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ui-grid-solo">
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">December 30, 2010 - First Artwork and Details for Mark Wait and Lenil Yu's Indestructible Hulk</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ui-grid-solo">
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">January 3, 2011 - The Justice League take on "Baz" in Green Lantern #14</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div>
+					<br />
+					<small>
+						Newstream titles &copy <a href="www.comicbookmovie.com">CBM</a>
+					</small>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="bronze">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="addItem.html">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+						<li><a href="../Gold/index.html">Gold</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>	
+
+	<!-- End Newstream page -->
+
+	<!-- About page -->
+
+		<div data-role="page" id="about">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>About the Creator</h1>
+
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<p>My name is Courtney Ardis. This is my <a href="http://ardiscb.github.com/MiU-site/Week2/Gold">Gold App</a> and this is my <a href="http://ardiscb.github.com/MiU-site/Week2/Bronze">Bronze App</a>
+				</p>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="bronze">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="addItem.html">Add Comic</a></li>
+						<li><a href="#newstream" id="newstream">Newstream</a></li>
+						<li><a href="../Gold/index.html">Gold</a></li>	
+					</ul>
+				</div>
+			</div>
+
 		</div>
- -->
 
+	<!-- End About page -->
+	
 	 	<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>

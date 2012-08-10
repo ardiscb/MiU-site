@@ -47,7 +47,9 @@ Term: 1208
 				<div data-role="collapsible-set" data-theme="a">
 					<h2>Browse</h2>
 					<!--Horror -->
+					<!-- Search feature -->
 					<ul data-filter="true" data-filter-placeholder="Search genres..." data-role="listview">
+						<!-- One Window Drilldown -->
 						<li>
 							<a href="#horror" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Horror</a>
 						</li>
@@ -76,41 +78,13 @@ Term: 1208
 					<ul>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a href="#about" id="about">About</a></li>
-						<li><a href="#newstream" id="newstream">Newstream</a></li>
-						<li><a href="./Bronze/index.html">Bronze</a></li>
+						<li><a id="covers" href="#covers">Covers</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	<!-- End Home page -->
-
-	<!-- Newstream page -->
-
-		<div data-role="page" id="newstream">
-		<!-- Header -->
-			<div data-role="header" data-position="fixed" align="center">
-				<h1>Newstream</h1>
-			</div>
-
-			<!-- Content -->
-			<div data-role="content">
-				
-			</div>
-			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
-				<!-- Nav Bar -->
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-
-	<!--End Newstream page -->	
 
 	<!-- Horror page -->
 
@@ -122,7 +96,7 @@ Term: 1208
 
 			<!-- Content -->
 			<div data-role="content">
-				<div data-role="collapsible" data-collapsed="true">
+				<div data-role="collapsible" data-collapsed="false">
 					<h3>Horror</h3>
 					<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outre horror<p>
 					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Horror Comics</a>
@@ -154,7 +128,7 @@ Term: 1208
 
 			<!-- Content -->
 			<div data-role="content">
-				<div data-role="collapsible" data-collapsed="true">
+				<div data-role="collapsible" data-collapsed="false">
 					<h3>Romance</h3>
 					<p>Comics depicting romantic love and its attendant complications such as jealousy, marriage, divorce, betrayal, and heartache</p>
 					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Romance Comics</a>
@@ -186,7 +160,7 @@ Term: 1208
 
 			<!-- Content -->
 			<div data-role="content">
-				<div data-role="collapsible" data-collapsed="true">
+				<div data-role="collapsible" data-collapsed="false">
 					<h3>Sci-Fi</h3>
 					<p>Comics that often mock or satirize standard science fiction conventions like alien invasion of Earth, interstellar travel, or futuristic technology</p>
 					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Sci-Fi Comics</a>
@@ -218,7 +192,7 @@ Term: 1208
 
 			<!-- Content -->
 			<div data-role="content">
-				<div data-role="collapsible" data-collapsed="true">
+				<div data-role="collapsible" data-collapsed="false">
 					<h3>Superhero</h3>
 					<p>Comics with a type of stock character possessing "extraordinary or superhuman powers" and dedicated to protecting the public</p>
 					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Superhero Comics</a>
@@ -250,7 +224,7 @@ Term: 1208
 
 			<!-- Content -->
 			<div data-role="content">
-				<div data-role="collapsible" data-collapsed="true">
+				<div data-role="collapsible" data-collapsed="false">
 					<h3>Western</h3>
 					<p>Comics set in the American Old West frontier (usually anywhere west of the Mississippi River) and typically set during the late nineteenth century</p>
 					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Western Comics</a>
@@ -270,7 +244,91 @@ Term: 1208
 
 		</div>
 
-	<!-- End Western page -->			
+	<!-- End Western page -->	
+	
+	<!-- Covers page -->
+
+		<div data-role="page" id="covers">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Comic Book Covers</h1>
+			</div>
+
+			<!-- Content -->
+			<!-- Thumbnail Grid -->
+			<div data-role="content">
+				<div class="ui-grid-b">
+				<div class="ui-block-a">
+						<img src="images/youngromance1.jpg" alt="cover" />
+					</div>
+					<div class="ui-block-b">
+						<img src="images/tombofdracula47.png" alt="cover" />
+					</div>
+					<div class="ui-block-c">
+						<img src="images/western1.jpg" alt="cover" />
+					</div>
+					<div class="ui-block-a">
+						<img src="images/trinity1.png" alt="cover" />
+					</div>
+					<div class="ui-block-b">
+						<img src="images/trinity2.jpg" alt="cover" />
+					</div>
+					<div class="ui-block-c">
+						<img src="images/trinity3.png" alt="cover" />
+					</div>
+					<div class="ui-block-a">
+						<img src="images/pursuit1.png" alt="cover" />
+					</div>
+					<div class="ui-block-b">
+						<img src="images/pursuit2.png" alt="cover" />
+					</div>
+					<div class="ui-block-c">
+						<img src="images/pursuit3.png" alt="cover" />
+					</div>
+				</div>
+				<div align="center">
+					<small>
+						Trinity #1, #2, #3 &copy DC Comics. 
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Spiderman Pursuit Parts &copy Marvel Comics. 
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Western Comic #1 &copy DC Comics. 
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Young Romance #1 &copy 
+					
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Young Romance. Tomb of Dracula #47 &copy Marvel Comics.
+					</small>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>	
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Covers page -->		
 
 	<!-- About page -->
 
@@ -278,8 +336,6 @@ Term: 1208
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>About the Creator</h1>
-				<!--Insert picture here-->
-				<img src="" alt="" />
 			</div>
 
 			<!-- Content -->
@@ -294,8 +350,8 @@ Term: 1208
 					<ul>
 						<li><a href="#home" id="search">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
-						<li><a href="#newstream" id="newstream">Newstream</a></li>
+						<li><a id="covers" href="#covers">Covers</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>	
 					</ul>
 				</div>
 			</div>
@@ -362,7 +418,7 @@ Term: 1208
 						<li><a href="#dataDisplay" id="displayData">Display Data</a></li>
 						<li><a href="#" id="clearData">Clear Data</a></li>
 						<li><a href="#about" id="about">About</a></li>
-						<li display="none"><a href="#addItem" id="addNew">Add New Comic</a></li>
+						<li><a href="#addItem" id="addNew">Add New Comic</a></li>
 					</ul>
 				</div>
 			</div>			
@@ -422,8 +478,8 @@ Term: 1208
 						<li><a href="#home" id="search">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a href="#about" id="about">About</a></li>
-						<li><a href="#newstream" id="newstream">Newstream</a></li>
-						<li><a href="./Bronze/index.html">Bronze</a></li>						
+						<li><a id="covers" href="#covers">Covers</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>						
 					</ul>
 				</div>
 			</div>
