@@ -21,6 +21,9 @@ body{
 	line-height: 25px;
 }
 
+#covers .ui-grid-b{
+	text-align: center;
+}
 
 /* ul element with the id="errors" on the addItem.html page */
 #errors{
