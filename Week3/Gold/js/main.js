@@ -1,6 +1,10 @@
 /*
 Author: Courtney Ardis 
+<<<<<<< HEAD
 Project: MiU Project 3
+=======
+Project: MiU Project 2
+>>>>>>> origin/gh-pages
 Term: 1208
 */
 
