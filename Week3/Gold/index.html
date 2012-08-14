@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--
+Author: Courtney Ardis 
+Project: MiU Project 2
+Term: 1208
+-->
+
+<!-- JQuery Mobile -->
+
+<html>
+	<head>
+		<meta charset ="utf-8" />
+		<meta name="description" content="Keep track of your comic book collection" />
+		<meta name="keywords" content="comic books, list, keep track, add comics, store comic titles" />
+		<meta name="robots" content="noindex, nofollow" />
+		<title>Comic Book Indexer</title>
+
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link href="css/styles.css" rel="stylesheet" /> 
+		
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	</head>
+	<body>
+	
+	<!-- SOURCE: Used Wikipedia for genre descriptions (better verbage) -->
+	<!-- Home page	 -->
+		<div data-role="page" id="home">
+			<!-- Header -->
+			<div data-role="header" align="center" >
+				<h1>Comic Book Indexer</h1>
+				<img src="images/CTA.png" alt="CTA" />
+			</div>
+			<!-- Content -->
+			<div data-role="content">
+					
+				<div data-role="collapsible-set" data-theme="a">
+					<h2>Browse</h2>
+					<!--Horror -->
+					<!-- Search feature -->
+					<ul data-filter="true" data-filter-placeholder="Search genres..." data-role="listview">
+						<!-- One Window Drilldown -->
+						<li>
+							<a href="#horror" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Horror</a>
+						</li>
+						<!--Romance-->
+						<li>
+							<a href="#romance" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Romance</a>
+						</li>
+						<!--Sci-Fi-->
+						<li>
+							<a href="#scifi" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Sci-Fi</a>
+						</li>
+						<!--Superhero-->
+						<li>
+							<a href="#superhero" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Superhero</a>
+						</li>
+						<!--Western-->
+						 <li>
+							<a href="#western" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Western</a>
+						</li>
+					</ul> 
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+						<li><a id="covers" href="#covers">Covers</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!-- End Home page -->
+
+	<!-- Horror page -->
+
+		<div data-role="page" id="horror">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Horror</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Horror</h3>
+					<p>Comics characterized by their gruesomely scripted and illustrated tales of ghosts and ghouls, zombies and vampires, haunted houses and graveyards, sexual perversion and sadism, torture, cannibalism, lycanthropy, dementia and other outre horror<p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Horror Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Horror page -->
+
+	<!-- Romance page -->
+
+		<div data-role="page" id="romance">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Romance</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Romance</h3>
+					<p>Comics depicting romantic love and its attendant complications such as jealousy, marriage, divorce, betrayal, and heartache</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Romance Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Romance page -->
+
+	<!-- Sci-Fi page -->
+
+		<div data-role="page" id="scifi">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Sci-Fi</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Sci-Fi</h3>
+					<p>Comics that often mock or satirize standard science fiction conventions like alien invasion of Earth, interstellar travel, or futuristic technology</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Sci-Fi Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Sci-Fi page -->
+
+	<!-- Superhero page -->
+
+		<div data-role="page" id="superhero">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Superhero</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Superhero</h3>
+					<p>Comics with a type of stock character possessing "extraordinary or superhuman powers" and dedicated to protecting the public</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Superhero Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Superhero page -->		
+
+	<!-- Western page -->
+
+		<div data-role="page" id="western">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Sci-Fi</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>Western</h3>
+					<p>Comics set in the American Old West frontier (usually anywhere west of the Mississippi River) and typically set during the late nineteenth century</p>
+					<a href="#construction" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-mini="true">Browse Western Comics</a>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Western page -->	
+	
+	<!-- Covers page -->
+
+		<div data-role="page" id="covers">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>Comic Book Covers</h1>
+			</div>
+
+			<!-- Content -->
+			<!-- Thumbnail Grid -->
+			<div data-role="content">
+				<div class="ui-grid-b">
+				<div class="ui-block-a">
+						<img src="images/youngromance1.jpg" alt="cover" />
+					</div>
+					<div class="ui-block-b">
+						<img src="images/tombofdracula47.png" alt="cover" />
+					</div>
+					<div class="ui-block-c">
+						<img src="images/western1.jpg" alt="cover" />
+					</div>
+					<div class="ui-block-a">
+						<img src="images/trinity1.png" alt="cover" />
+					</div>
+					<div class="ui-block-b">
+						<img src="images/trinity2.jpg" alt="cover" />
+					</div>
+					<div class="ui-block-c">
+						<img src="images/trinity3.png" alt="cover" />
+					</div>
+					<div class="ui-block-a">
+						<img src="images/pursuit1.png" alt="cover" />
+					</div>
+					<div class="ui-block-b">
+						<img src="images/pursuit2.png" alt="cover" />
+					</div>
+					<div class="ui-block-c">
+						<img src="images/pursuit3.png" alt="cover" />
+					</div>
+				</div>
+				<div align="center">
+					<small>
+						Trinity #1, #2, #3 &copy DC Comics. 
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Spiderman Pursuit Parts &copy Marvel Comics. 
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Western Comic #1 &copy DC Comics. 
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Young Romance #1 &copy 
+					
+					</small>
+				</div>
+				<div align="center">
+					<small>
+						Young Romance. Tomb of Dracula #47 &copy Marvel Comics.
+					</small>
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>	
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Covers page -->		
+
+	<!-- About page -->
+
+		<div data-role="page" id="about">
+		<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<h1>About the Creator</h1>
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<p>My name is Courtney Ardis. This is my <a href="http://ardiscb.github.com/MiU-site/Week2/Gold">Gold App</a> and this is my <a href="http://ardiscb.github.com/MiU-site/Week2/Bronze">Bronze App</a>
+				</p>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a id="covers" href="#covers">Covers</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>	
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End About page -->
+
+	<!-- Add Item page -->
+	<div data-role="page" id="addItem">
+		<!-- Header -->
+		<div data-role="header" align="center" data-position="fixed">
+			<h1 id="addComic">Add Comic</h1>			
+		</div>
+		<!-- Add Comic Form -->
+		<div>
+			<form action="#" method="post" id="comicForm" data-ajax="false">
+					<div class="mainUl">
+						<!-- Comic Information Inputs -->
+						<div data-role="fieldcontain" id="required"><h4>*required fields</h4></div>
+						<div id="errors"></div>
+						<div data-role="fieldcontain"><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" /></div>
+						<div data-role="fieldcontain"><label for="seriesTitle" class="label">Title of Series:</label><input type="text" id="seriesTitle" /></div>
+						<div data-role="fieldcontain"><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" /><small id="inputHint">example: 47</small></div>
+						<div data-role="fieldcontain"><label for="dateReleased" class="label">Date Released:</label><input type="date" id="dateReleased" /></div>
+						<div data-role="fieldcontain"><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" /></div>
+						<div data-role="fieldcontain"><label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label><input type="range" id="rateIssue" value="0" min="0" max="5" /></div>
+		 				<!--Genre Dropdown Menu-->
+		 				<div data-role="fieldcontain" id="select"><label for="genre" class="label">*Select Genre:</label></div> 
+						<!--REPLACED so JavaScript can create the menu dynamically
+							<select id="genre">
+								<option>Superhero</option>
+								<option>Horror</option>
+								<option>Sci-fi</option>
+								<option>Western</option>
+								<option>Romance</option>
+							</select>
+						-->				
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" class="mainUl">
+								<legend>Illustration Style:</legend>
+								<!-- Illustration Radio Buttons -->
+								<div class="illStyle"><input type="radio" id="fullColor" value="Full Color" name="illStyle" /><label for="fullColor">Full Color</label></div>
+								<div class="illStyle"><input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" /><label for="blackWhite">Black &amp; White</label></div>
+								<div class="illStyle"><input type="radio" id="combination" value="Combination" name="illStyle" /><label for="combination">Combination</label></div>
+							</fieldset>
+						</div>
+						<!-- Comment Textarea -->
+						<div data-role="fieldcontain">
+							<label for="comments">Comments:</label>
+							<textarea id="comments"></textarea>
+						</div>
+					</div>		
+				<!-- Submit Elements -->
+				<div data-role="fieldcontain">		
+					<input type="submit" class="button" data-theme="b" value="Add Comic" id="submit" />
+				</div>	
+			</form>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<!-- Local Storage Nav Elements -->
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a href="#dataDisplay" id="displayData">Display Data</a></li>
+						<li><a href="#" id="clearData">Clear Data</a></li>
+						<li><a href="#about" id="about">About</a></li>
+						<li><a href="#addItem" id="addNew">Add New Comic</a></li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>					
+
+	<!-- End Add Item page -->
+
+	<!-- Display Data page -->
+
+	<div data-role="page" id="dataDisplay">
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" align="center">
+			<h4>Saved Comics</h4>
+		</div>
+		<!-- Content -->
+		<div data-role="content" id="data">
+
+		</div>
+		
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<!-- Nav Bar -->
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"id="search">Home</a></li>
+					<li><a id="link" href="#addItem">Add Comic</a></li>
+					<li><a href="#" id="clearData">Clear Data</a></li>
+					<li><a href="#about" id="about">About</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- End Display Data page -->
+
+	<!-- Construction page -->
+
+		<div data-role="page" id="construction">
+			<!-- Header -->
+			<div data-role="header" data-position="fixed" align="center">
+				<img src="images/error.png" alt="Orange triangle with an exclamation mark in the middle" />
+			</div>
+
+			<!-- Content -->
+			<div data-role="content">
+				<p>This page is under construction. We apologize for any inconvenience this may cause you. </p>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<!-- Nav Bar -->
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" id="search">Home</a></li>
+						<li><a id="link" href="#addItem">Add Comic</a></li>
+						<li><a href="#about" id="about">About</a></li>
+						<li><a id="covers" href="#covers">Covers</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>						
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- End Construction page -->
+
+	 	<!-- JavaScript under here -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/json.js" type="text/javascript"></script>
+	</body>
+</html>
