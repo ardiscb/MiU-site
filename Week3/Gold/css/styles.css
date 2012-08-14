@@ -1,0 +1,92 @@
+/*
+Author: Courtney Ardis 
+Project: MiU Project 2
+Term: 1208
+*/
+
+/* This css file is linked to index.html, addItem.html and construction.html*/
+/* Code is in logical order based on the addItem.html page */
+/* Section comments indicate where the selectors come from even though the style applies to all elements on the page(s) in which the stylesheet is linked */
+
+/* everything on both the index.html and addItem.html page is styled with the properties below*/
+*{
+	font-family: Arial, Helvetica, serif;
+}
+
+/* body element on both the index.html and addItem.hmtl page */
+body{
+	background-color: #999;
+	letter-spacing: .07em;
+	word-wrap: break-word;
+	line-height: 25px;
+}
+
+#covers .ui-grid-b{
+	text-align: center;
+}
+
+#inputHint{
+	color: grey;
+}
+/* ul element with the id="errors" on the addItem.html page */
+#errors{
+	color: red;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-bottom: 15px;
+	list-style: none;
+}
+
+/* li element with the id="required" on the addItem.html page */
+#required{
+	font-size: 7pt;
+	margin-bottom: 15px;
+	color: red;
+}
+
+/* elements with the class="label" and class="input" on the addItem.page */
+.label, .input {
+	display: block;
+}
+
+/* a element with the id="deleteA" dynamically created on the addItem.html page with JavaScript */
+#deleteA {
+	display: block;
+}
+
+/* textarea element with an id="comments" on the addItem.html page  */
+#comments {
+	vertical-align: text-top;
+	display: block;
+}
+
+/* ul element within div element which is dynamically created by JavaScript to display data on the addItem.html page */
+#items{
+    float: left;
+    list-style-type: none;
+    margin: 5px 0px;
+    padding: 0px;
+}
+
+form {
+	margin: 15px;
+}
+
+/* li element within ul element within div element which is dynamically created by JavaScript to display data on the addItem.html page */
+div ul li {
+    list-style-type: none;
+}
+
+/*Horizontal line after each item*/
+hr{
+	float: left;
+    height: 12px;
+    width: 300px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+/* a element with an id="addNew" on the addItem.html page */
+#addNew{
+	display: none;
+}
