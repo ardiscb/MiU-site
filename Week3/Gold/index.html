@@ -78,13 +78,9 @@ Term: 1208
 				<div data-role="navbar">
 					<ul>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
-
 						<li><a id="about" href="#about">About</a></li>
-
-						<li><a href="#about" id="about">About</a></li>
-
 						<li><a id="covers" href="#covers">Covers</a></li>
-						<li><a href="../Bronze/index.html">Bronze</a></li>
+						<li><a href="../Bronze/index.html">Bronze</a></li>						
 					</ul>
 				</div>
 			</div>
@@ -115,9 +111,6 @@ Term: 1208
 						<li><a id="search" href="#home">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="about" href="#about">About</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -150,9 +143,6 @@ Term: 1208
 						<li><a id="search" href="#home">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="about" href="#about">About</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -185,9 +175,6 @@ Term: 1208
 						<li><a id="search" href="#home">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="about" href="#about">About</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -220,9 +207,6 @@ Term: 1208
 						<li><a id="search" href="#home">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="about" href="#about">About</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -255,9 +239,6 @@ Term: 1208
 						<li><a id="search" href="#home">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="about" href="#about">About</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -341,10 +322,6 @@ Term: 1208
 						<li><a id="search" href="#home">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="about" href="#about">About</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
-						<li><a href="../Bronze/index.html">Bronze</a></li>	
 					</ul>
 				</div>
 			</div>
@@ -372,10 +349,8 @@ Term: 1208
 				<div data-role="navbar">
 					<ul>
 						<li><a id="search" href="#home">Home</a></li>
-						<li><a href="#home" id="search">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="covers" href="#covers">Covers</a></li>
-						<li><a href="../Bronze/index.html">Bronze</a></li>	
 					</ul>
 				</div>
 			</div>
@@ -397,23 +372,14 @@ Term: 1208
 						<!-- Comic Information Inputs -->
 						<div data-role="fieldcontain" id="required"><h4>*required fields</h4></div>
 						<div id="errors"></div>
-						<div data-role="fieldcontain"><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" /></div>
+						<div data-role="fieldcontain"><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" class="required"/></div>
 						<div data-role="fieldcontain"><label for="seriesTitle" class="label">Title of Series:</label><input type="text" id="seriesTitle" /></div>
-						<div data-role="fieldcontain"><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" /><small id="inputHint">example: 47</small></div>
+						<div data-role="fieldcontain"><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" class="required number"/><small id="inputHint">example: 47</small></div>
 						<div data-role="fieldcontain"><label for="dateReleased" class="label">Date Released:</label><input type="date" id="dateReleased" /></div>
-						<div data-role="fieldcontain"><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" /></div>
+						<div data-role="fieldcontain"><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" class="required"/></div>
 						<div data-role="fieldcontain"><label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label><input type="range" id="rateIssue" value="0" min="0" max="5" /></div>
 		 				<!--Genre Dropdown Menu-->
-		 				<div data-role="fieldcontain" id="select"><label for="genre" class="label">*Select Genre:</label></div> 
-						<!--REPLACED so JavaScript can create the menu dynamically
-							<select id="genre">
-								<option>Superhero</option>
-								<option>Horror</option>
-								<option>Sci-fi</option>
-								<option>Western</option>
-								<option>Romance</option>
-							</select>
-						-->				
+		 				<div data-role="fieldcontain" id="select"><label for="genre" class="label">*Select Genre:</label></div> 			
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" class="mainUl">
 								<legend>Illustration Style:</legend>
@@ -432,7 +398,7 @@ Term: 1208
 				<!-- Submit Elements -->
 				<div data-role="fieldcontain">		
 					<input type="submit" class="button" data-theme="b" value="Add Comic" id="submit" />
-				</div>	
+				</div>
 			</form>
 			<!-- Footer -->
 			<div data-role="footer" data-position="fixed" data-id="home">
@@ -444,11 +410,6 @@ Term: 1208
 						<li><a id="clearData" href="#">Clear Data</a></li>
 						<li><a id="about" href="#about">About</a></li>
 						<li><a id="addNew" href="#addItem">Add New Comic</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a href="#dataDisplay" id="displayData">Display Data</a></li>
-						<li><a href="#" id="clearData">Clear Data</a></li>
-						<li><a href="#about" id="about">About</a></li>
-						<li><a href="#addItem" id="addNew">Add New Comic</a></li>
 					</ul>
 				</div>
 			</div>			
@@ -479,10 +440,6 @@ Term: 1208
 					<li><a id="link" href="#addItem">Add Comic</a></li>
 					<li><a id="clearData" href="#">Clear Data</a></li>
 					<li><a id="about" href="#about">About</a></li>
-					<li><a href="#home"id="search">Home</a></li>
-					<li><a id="link" href="#addItem">Add Comic</a></li>
-					<li><a href="#" id="clearData">Clear Data</a></li>
-					<li><a href="#about" id="about">About</a></li>
 				</ul>
 			</div>
 
@@ -512,10 +469,6 @@ Term: 1208
 						<li><a id="search" href="#home">Home</a></li>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
 						<li><a id="about" href="#about">About</a></li>
-						<li><a href="#home" id="search">Home</a></li>
-						<li><a id="link" href="#addItem">Add Comic</a></li>
-						<li><a href="#about" id="about">About</a></li>
-						<li><a id="covers" href="#covers">Covers</a></li>
 						<li><a href="../Bronze/index.html">Bronze</a></li>						
 					</ul>
 				</div>
@@ -528,6 +481,7 @@ Term: 1208
 	 	<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 		<script src="js/json.js" type="text/javascript"></script>
 	</body>
