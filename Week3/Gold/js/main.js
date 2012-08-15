@@ -1,31 +1,35 @@
-/*
-Author: Courtney Ardis 
-<<<<<<< HEAD
-Project: MiU Project 3
-=======
-Project: MiU Project 2
->>>>>>> origin/gh-pages
-Term: 1208
-*/
+$('#home').on('pageinit', function(){
+	//code needed for home page goes here
 
-//This javascript file is linked to addItem.html
+});	
+		
+$('#addItem').on('pageinit', function(){
 
-//Wait until DOM is ready
-window.addEventListener("DOMContentLoaded", function() {
+		var myForm = $('#comicForm');
+		    myForm.validate({
+			invalidHandler: function(form, validator) {
+			},
+			submitHandler: function() {
+		var data = myForm.serializeArray();
+			storeData(this.key);
+		}
+	});
 	
-	//'$' used by jquery and jqmobile as reserved word; changed function name to 'e' for future use
+	//any other code needed for addItem page goes here
+
 	//getElementById Function
-	function e(x){
+	var e = function(x){
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
+
 	//Variable defaults
 	var comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-Fi", "Western", "Romance"],
 		styleValue,
 		errMsg = e('errors');
 
 	//Select field and options populated
-	function makeGenre(){
+	var makeGenre = function(){
 		var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
 			selectLi = e("select"),
 			makeSelect = document.createElement("select");
@@ -42,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	};
 	
 	//Find value of the selected radio button for the storeData function
-	function getSelectedRadio(){
+	var getSelectedRadio = function(){
 		var radios = document.forms[0].illStyle;
 		for(var i=0; i<radios.length; i++){
 			if(radios[i].checked){
@@ -51,29 +55,63 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-	//Toggle how the comicForm, clearData, displayData, and addNew links display on the addItem.html page
-	function toggleControls(n){
-		switch(n){
-			case "on":
-				e('comicForm').style.display = "none";
-				e('clearData').style.display = "inline";
-				e('displayData').style.display = "none";
-				e('addNew').style.display = "inline";				
-				break;
-			case "off":
-				e('comicForm').style.display = "block";
-				e('clearData').style.display = "inline";
-				e('displayData').style.display = "inline";
-				e('addNew').style.display = "none";
-				e('dataDisplay').style.display = "none";
-				break;
-			default:
-				return false;
+	//Auto Popluate Local Storage
+	var autofillData = function (){
+		//The actual JSON OBJECT data required for this to work is coming from our json.js file, which is loaded from our HTML page
+		//Store JSON OBJECT into Local Storage
+		for(var n in json){
+			var id = Math.floor(Math.random()*100000000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
+	};
+
+	//Get the image for the right category
+	var getImage = function(catName, makeSubList){
+		var imageLi = document.createElement('li');
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement('img');
+		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
+		imageLi.appendChild(newImg);
 	}
 
-	//Function that stores the form fields into Local Storage with a key and value
-	function storeData(key){
+	var getData = function(){
+		// toggleControls("on");
+		if(localStorage.length === 0){
+			alert("There is no data in Local Storage so default data was added.");
+			autofillData();
+		}
+		//Write Data from Local Storage to the browser
+		var makeDiv = document.getElementById('data');
+
+		// makeDiv.setAttribute("id", "dataD");
+
+		var makeList = document.createElement('ul');
+		makeDiv.appendChild(makeList);
+		document.body.appendChild(makeDiv);
+		e('dataDisplay').style.display = "block";
+		for(var i=0, j=localStorage.length; i<j; i++){
+			var makeLi = document.createElement('li');
+			var linksLi = document.createElement('li');
+			makeList.appendChild(makeLi);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//Convert the string from local storage value back to an object by using JSON.parse()
+			var obj = JSON.parse(value);
+			var makeSubList = document.createElement('ul');
+			makeLi.appendChild(makeSubList);
+			getImage(obj.genre[1], makeSubList);
+			for (var n in obj){
+				var makeSubLi = document.createElement('li');
+				makeSubList.appendChild(makeSubLi);
+				var optSubText = obj[n][0] + " " + obj[n][1];
+				makeSubLi.innerHTML = optSubText;
+				makeSubList.appendChild(linksLi);
+			}
+			makeItemLinks(localStorage.key(i), linksLi);//Function call for our edit and delete buttons/links
+		}
+	};
+
+	var storeData = function(data){
 		//If there is no key, this is a brand new item and we need to generate a key
 		if(!key){
 			var id    			= Math.floor(Math.random()*100000000001);	
@@ -99,64 +137,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		//Save data into Local Storage: Use Stringify to convert our object to a string
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Comic saved to index!");
-	}
-	
-	//Get the image for the right category
-	function getImage(catName, makeSubList){
-		var imageLi = document.createElement('li');
-		makeSubList.appendChild(imageLi);
-		var newImg = document.createElement('img');
-		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
-		imageLi.appendChild(newImg);
-	}
-
-	//Function that displays the data that has been saved into Local Storage
-	function getData(){
-		toggleControls("on");
-		if(localStorage.length === 0){
-			alert("There is no data in Local Storage so default data was added.");
-			autoFillData();
-		}
-		//Write Data from Local Storage to the browser
-		var makeDiv = document.getElementById('data');
-/*
-		makeDiv.setAttribute("id", "dataD");
-*/
-		var makeList = document.createElement('ul');
-		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
-		e('dataDisplay').style.display = "block";
-		for(var i=0, j=localStorage.length; i<j; i++){
-			var makeLi = document.createElement('li');
-			var linksLi = document.createElement('li');
-			makeList.appendChild(makeLi);
-			var key = localStorage.key(i);
-			var value = localStorage.getItem(key);
-			//Convert the string from local storage value back to an object by using JSON.parse()
-			var obj = JSON.parse(value);
-			var makeSubList = document.createElement('ul');
-			makeLi.appendChild(makeSubList);
-			getImage(obj.genre[1], makeSubList);
-			for (var n in obj){
-				var makeSubLi = document.createElement('li');
-				makeSubList.appendChild(makeSubLi);
-				var optSubText = obj[n][0] + " " + obj[n][1];
-				makeSubLi.innerHTML = optSubText;
-				makeSubList.appendChild(linksLi);
-			}
-			makeItemLinks(localStorage.key(i), linksLi);//Function call for our edit and delete buttons/links
-		}
-	}
-	
-	//Auto Popluate Local Storage
-	function autoFillData(){
-		//The actual JSON OBJECT data required for this to work is coming from our json.js file, which is loaded from our HTML page
-		//Store JSON OBJECT into Local Storage
-		for(var n in json){
-			var id = Math.floor(Math.random()*100000000001);
-			localStorage.setItem(id, JSON.stringify(json[n]));
-		}
-	}
+	}; 
 
 	//Make Item Links
 	//Create the edit and delete links for each stored item when displayed
@@ -189,15 +170,14 @@ window.addEventListener("DOMContentLoaded", function() {
 		linksLi.appendChild(hr);
 	}
 
-	//Function that allows for a single item to be edited
-	function editItem(){
+	var	editItem = function (){
 		//Grab the data from our item in Local Storage
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
 
 		
 		//Show the form
-		toggleControls("off");
+		// toggleControls("off");
 
 
 		//populate the form fields with current Local Storage values
@@ -221,18 +201,17 @@ window.addEventListener("DOMContentLoaded", function() {
 		e('comments').value 	= item.comments[1];
 
 		//Remove the initial listener from the input 'save comic' button
-		save.removeEventListener("click", storeData);
+		// save.removeEventListener("click", storeData);
 		//Change Submit button value to Edit button
 		e('submit').value = "Edit Comic";
 		var editSubmit = e('submit');
-		//Save the key value established in this function as a property of the editSubmit event
-		//so we can use that value when we save the data we edited
-		editSubmit.addEventListener("click", validate);
+		// //Save the key value established in this function as a property of the editSubmit event
+		// //so we can use that value when we save the data we edited
+		// editSubmit.addEventListener("click", validator);
 		editSubmit.key = this.key;
 	}
 
-	//Function that deletes a single item from Local Storage
-	function deleteItem(){
+	var	deleteItem = function (){
 		var ask = confirm("Are you sure you want to delete this comic?");
 		if(ask){
 			localStorage.removeItem(this.key);
@@ -240,11 +219,10 @@ window.addEventListener("DOMContentLoaded", function() {
 			window.location.reload();
 		}else{
 			alert("Comic was NOT deleted!");
-		}
-	}
-
-	//Function that clears all the items that have been saved in Local Storage
-	function clearLocal(){
+		}		
+	};
+						
+	var clearLocal = function(){
 		if(localStorage.length === 0){
 			alert("There is no data to clear.");
 		}else{
@@ -253,171 +231,20 @@ window.addEventListener("DOMContentLoaded", function() {
 			window.location.reload();
 			return false;
 		}
-	}
-
-	//Function that validates input fields
-	function validate(t){
-		//Define the elements we want to check
-		var getComicTitle 	= e('comicTitle');
-		var getIssueNum 	= e('issueNum');
-		var getPublisher 	= e('publisher');
-		var getGenre 		= e('genre');
-
-		//Reset Error Messages
-		errMsg.innerHTML = "";
-		getComicTitle.style.border = "2px inset";
-		getIssueNum.style.border = "2px inset";
-		getPublisher.style.border = "2px inset";
-		getGenre.style.border = "2px inset";
-
-		//Get Error Messages
-		var messageArray = [];
-		//Comic Title Validation
-		if(getComicTitle.value === ""){
-			var comicTitleError = "Please enter a comic title.";
-			getComicTitle.style.border = "1px solid red";
-			messageArray.push(comicTitleError);
-		}
-		//Issue Number Validation
-
-		if(getIssueNum.value === ""){
-			var issueNumError = "Please enter an issue number.";
-			getIssueNum.style.border = "1px solid red";
-			messageArray.push(issueNumError);
-		}
-		//Publisher Validation
-		if(getPublisher.value === ""){
-			var publisherError = "Please enter a publisher.";
-			getPublisher.style.border = "1px solid red";
-			messageArray.push(publisherError);
-		}
-		//Genre Validation
-		if(getGenre.value === "--Choose A Genre--"){
-			var genreError = "Please choose a genre.";
-			getGenre.style.border = "1px solid red";
-			messageArray.push(genreError);
-		}
-
-		//If there were errors, display them on the screen
-		if(messageArray.length >= 1){
-			for(var i=0, j=messageArray.length; i < j; i++){
-				var text = document.createElement('li');
-				text.innerHTML = messageArray[i];
-				errMsg.appendChild(text);
-			}
-			t.preventDefault();
-			return false;
-		}else{
-			//If there are no erros, save our data
-			storeData(this.key);
-		}
-	}
+	};
 
 	//Function calls
 	makeGenre();
 
 	//Set Link and Submit Click Events
-	var displayLink = e('dataDisplay');
+	var displayLink = e('displayData');
 	displayLink.addEventListener("click", getData);
 	var clearLink = e('clearData');
 	clearLink.addEventListener("click", clearLocal);
 	var save = e('submit');
-	save.addEventListener("click", validate);
-
-
-	//Browse (not functioning)
-	//There is a better way to do this. 
-	//I couldn't wrap my head around it this week.
-/*	var superheroLink = e('Superhero');
-	superheroLink.addEventListener("click", getSuperhero);
-	var horrorLink = e('Horror');
-	horrorLink.addEventListener("click", getHorror);
-	var westernLink = e('Western');
-	westernLink.addEventListener("click", getWestern);
-	var romanceLink = e('Romance');
-	romanceLink.addEventListener("click", getRomance);
-	var scifiLink = e('Sci-Fi');
-	scifiLink.addEventListener("click", getSciFi);
-
-	var getSuperhero = {
-
-	};
-
-	var getHorror = {
-
-	};
-
-	var getWestern = {
-
-	};
-
-	var getRomance = {
-
-	};
-
-	 var getSciFi = {
-
-	 };
-*/
-/*
-	//Search (not functioning)
-	var search = e('searchBtn');
-
-	var getSearch = function(){
-		// var category = e('genre').value;
-		var term = e('search').value;
-*/
-
-/*		//Search by Category Only
-		if(category != "--Choose A Genre--" && term === ""){
-			for(i=0, j=localStorage.length; i<j; i++){
-				var key = localStorage.key(i);
-				var value = localStorage.getItem(key);
-				var item = JSON.parse(value);
-				if(category === item.genre[1]){
-					for (n in item){
-						console.log(item[n][1]);
-					}
-				}
-			}
-		}*/
-
-		//Search by Term Only
-/*
-		if(term !== ""){
-			for(i=0, j=localStorage.length; i<j; i++){
-				var key = localStorage.key(i);
-				var value = localStorage.getItem(key);
-				var item = JSON.parse(value);
-				for(n in item){
-					if(term === item[n][1]){
-						for(q in item){
-							console.log(item[q][1]);
-						}
-					}
-				}
-			}
-		}
-	};
-*/
-/*		//Search by BOTH Category AND Term
-		if(term !== "" && category !== "--Choose A Genre--"){
-			for(i=0, j=localStorage.length; i<j; i++){
-				var key = localStorage.key(i);
-				var value = localStorage.getItem(key);
-				var item = JSON.parse(value);
-				for(n in item){
-					if(term === item[n][1] && category === item.genre[1]){
-						for(q in item){
-							console.log(item[q][1]);
-						}
-					}
-				}	
-			}
-		}*/
-
-
-/* 	search.addEventListener("click", getSearch); */
-
+	save.addEventListener("click", storeData);
 
 });
+
+//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
