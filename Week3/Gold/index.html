@@ -372,21 +372,59 @@ Term: 1208
 						<!-- Comic Information Inputs -->
 						<div data-role="fieldcontain" id="required"><h4>*required fields</h4></div>
 						<div id="errors"></div>
-						<div data-role="fieldcontain"><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" class="required"/></div>
-						<div data-role="fieldcontain"><label for="seriesTitle" class="label">Title of Series:</label><input type="text" id="seriesTitle" /></div>
-						<div data-role="fieldcontain"><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" class="required number"/><small id="inputHint">example: 47</small></div>
-						<div data-role="fieldcontain"><label for="dateReleased" class="label">Date Released:</label><input type="date" id="dateReleased" /></div>
-						<div data-role="fieldcontain"><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" class="required"/></div>
-						<div data-role="fieldcontain"><label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label><input type="range" id="rateIssue" value="0" min="0" max="5" /></div>
-		 				<!--Genre Dropdown Menu-->
-		 				<div data-role="fieldcontain" id="select"><label for="genre" class="label">*Select Genre:</label></div> 			
 						<div data-role="fieldcontain">
-							<fieldset data-role="controlgroup" class="mainUl">
+							<label for="comicTitle" class="label">*Title of Comic:</label>
+							<input type="text" id="comicTitle" class="required" placeholder="example: Rogue" />
+						</div>
+						<div data-role="fieldcontain">
+							<label for="seriesTitle" class="label">Title of Series:</label>
+							<input type="text" id="seriesTitle" />
+						</div>
+						<div data-role="fieldcontain">
+							<label for="issueNum" class="label">*Issue Number:</label>
+							<input type="text" id="issueNum" class="required" placeholder="example: 47" />
+							<!-- <small id="inputHint">example: 47</small> -->
+						</div>
+						<div data-role="fieldcontain">
+							<label for="dateReleased" class="label">Date Released:</label>
+							<input type="date" id="dateReleased" />
+						</div>
+						<div data-role="fieldcontain">
+							<label for="publisher" class="label">*Publisher:</label>
+							<input type="text" id="publisher" class="required" placeholder="example: DC Comics"/>
+						</div>
+						<div data-role="fieldcontain">
+							<label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label>
+							<input type="range" id="rateIssue" value="3" min="0" max="5" data-theme="b" />
+						</div>
+		 				<!--Genre Dropdown Menu-->
+		 				<div data-role="fieldcontain" id="select">
+		 					<label for="genre" class="label">*Genre:</label>
+		 					<select id="genre" data-theme="b">
+		 						<option>--Choose A Genre--</option>
+								<option>Superhero</option>
+								<option>Horror</option>
+								<option>Sci-fi</option>
+								<option>Western</option>
+								<option>Romance</option>
+							</select>
+		 				</div> 			
+						<div data-role="fieldcontain" class="illStyle">
+							<fieldset data-role="controlgroup">
 								<legend>Illustration Style:</legend>
 								<!-- Illustration Radio Buttons -->
-								<div class="illStyle"><input type="radio" id="fullColor" value="Full Color" name="illStyle" /><label for="fullColor">Full Color</label></div>
-								<div class="illStyle"><input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" /><label for="blackWhite">Black &amp; White</label></div>
-								<div class="illStyle"><input type="radio" id="combination" value="Combination" name="illStyle" /><label for="combination">Combination</label></div>
+								<div>
+									<input type="radio" id="fullColor" value="Full Color" name="illStyle" data-theme="b" checked/>
+									<label for="fullColor">Full Color</label>
+								</div>
+								<div>
+									<input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" data-theme="b" />
+									<label for="blackWhite">Black &amp; White</label>
+								</div>
+								<div>
+									<input type="radio" id="combination" value="Combination" name="illStyle" data-theme="b" />
+									<label for="combination">Combination</label>
+								</div>
 							</fieldset>
 						</div>
 						<!-- Comment Textarea -->
@@ -397,7 +435,9 @@ Term: 1208
 					</div>		
 				<!-- Submit Elements -->
 				<div data-role="fieldcontain">		
-					<input type="submit" class="button" data-theme="b" value="Add Comic" id="submit" />
+					<input type="submit" data-role="button" class="button" data-theme="b" value="Add Comic" id="submit" data-inline="true" />
+					<span> | </span>
+					<a href="#" class="button" data-theme="a" value="Clear All" id="reset" data-inline="true">Clear All</a>
 				</div>
 			</form>
 			<!-- Footer -->
