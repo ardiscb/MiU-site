@@ -21,29 +21,30 @@ $('#addItem').on('pageinit', function(){
 	var e = function(x){
 		var theElement = document.getElementById(x);
 		return theElement;
-	}
+	};
 
 	//Variable defaults
-	var comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-Fi", "Western", "Romance"],
+	 var //comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-Fi", "Western", "Romance"],
 		styleValue,
 		errMsg = e('errors');
 
 	//Select field and options populated
-	var makeGenre = function(){
-		var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
-			selectLi = e("select"),
-			makeSelect = document.createElement("select");
-		makeSelect.setAttribute("id", "genre");
-		makeSelect.setAttribute("data-native-menu", "false");
-		for(var i=0, j=comicGenre.length; i<j; i++){
-			var makeOption = document.createElement("option");
-			var	optText = comicGenre[i];
-			makeOption.setAttribute("value", optText);
-			makeOption.innerHTML = optText;
-			makeSelect.appendChild(makeOption);
-		}
-		selectLi.appendChild(makeSelect);
-	};
+	// var makeGenre = function(){
+	// 	var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
+	// 		selectLi = e("select"),
+	// 		makeSelect = document.createElement("select");
+	// 	makeSelect.setAttribute("id", "genre");
+	// 	makeSelect.setAttribute("data-native-menu", "false");
+	// 	makeSelect.setAttribute("class", "required")
+	// 	for(var i=0, j=comicGenre.length; i<j; i++){
+	// 		var makeOption = document.createElement("option");
+	// 		var	optText = comicGenre[i];
+	// 		makeOption.setAttribute("value", optText);
+	// 		makeOption.innerHTML = optText;
+	// 		makeSelect.appendChild(makeOption);
+	// 	}
+	// 	selectLi.appendChild(makeSelect);
+	// };
 	
 	//Find value of the selected radio button for the storeData function
 	var getSelectedRadio = function(){
@@ -53,7 +54,7 @@ $('#addItem').on('pageinit', function(){
 				styleValue = radios[i].value;
 			}
 		}
-	}
+	};
 
 	//Auto Popluate Local Storage
 	var autofillData = function (){
@@ -72,7 +73,7 @@ $('#addItem').on('pageinit', function(){
 		var newImg = document.createElement('img');
 		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
 		imageLi.appendChild(newImg);
-	}
+	};
 
 	var getData = function(){
 		// toggleControls("on");
@@ -81,14 +82,9 @@ $('#addItem').on('pageinit', function(){
 			autofillData();
 		}
 		//Write Data from Local Storage to the browser
-		var makeDiv = document.getElementById('data');
-
-		// makeDiv.setAttribute("id", "dataD");
-
+		var makeDiv = e('data');
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
-		e('dataDisplay').style.display = "block";
 		for(var i=0, j=localStorage.length; i<j; i++){
 			var makeLi = document.createElement('li');
 			var linksLi = document.createElement('li');
@@ -111,7 +107,7 @@ $('#addItem').on('pageinit', function(){
 		}
 	};
 
-	var storeData = function(data){
+	var storeData = function(key){
 		//If there is no key, this is a brand new item and we need to generate a key
 		if(!key){
 			var id    			= Math.floor(Math.random()*100000000001);	
@@ -141,7 +137,7 @@ $('#addItem').on('pageinit', function(){
 
 	//Make Item Links
 	//Create the edit and delete links for each stored item when displayed
-	function makeItemLinks(key, linksLi){
+	var makeItemLinks = function(key, linksLi){
 		//add edit single item link
 		var editLink = document.createElement('a');
 		editLink.href = "#";
@@ -168,17 +164,12 @@ $('#addItem').on('pageinit', function(){
 		//Creates a horizontal line/separator after each item
 		var hr = document.createElement('hr');
 		linksLi.appendChild(hr);
-	}
+	};
 
 	var	editItem = function (){
 		//Grab the data from our item in Local Storage
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
-
-		
-		//Show the form
-		// toggleControls("off");
-
 
 		//populate the form fields with current Local Storage values
 		e('comicTitle').value 	= item.comicTitle[1];
@@ -207,9 +198,9 @@ $('#addItem').on('pageinit', function(){
 		var editSubmit = e('submit');
 		// //Save the key value established in this function as a property of the editSubmit event
 		// //so we can use that value when we save the data we edited
-		// editSubmit.addEventListener("click", validator);
+		editSubmit.addEventListener("click", storeData);
 		editSubmit.key = this.key;
-	}
+	};
 
 	var	deleteItem = function (){
 		var ask = confirm("Are you sure you want to delete this comic?");
@@ -234,7 +225,7 @@ $('#addItem').on('pageinit', function(){
 	};
 
 	//Function calls
-	makeGenre();
+	// makeGenre();
 
 	//Set Link and Submit Click Events
 	var displayLink = e('displayData');

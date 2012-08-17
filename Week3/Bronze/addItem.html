@@ -33,14 +33,14 @@ Term: 1208
 						<!-- Comic Information Inputs -->
 						<li id="required">*required fields</li>
 						<ul id="errors"></ul>
-						<li><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" /></li>
+						<li><label for="comicTitle" class="label">*Title of Comic:</label><input type="text" id="comicTitle" placeholder="example: Rogue" /></li>
 						<li><label for="seriesTitle" class="label">Title of Series:</label><input type="text" id="seriesTitle" /></li>
-						<li><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" /></li>
+						<li><label for="issueNum" class="label">*Issue Number:</label><input type="text" id="issueNum" placeholder="example: 47" /></li>
 						<li><label for="dateReleased" class="label">Date Released:</label><input type="date" id="dateReleased" /></li>
-						<li><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" /></li>
-						<li><label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label><input type="range" id="rateIssue" min="0" max="5" onchange="rangeValue.value=value" /><output id="rangeValue"></output></li>
+						<li><label for="publisher" class="label">*Publisher:</label><input type="text" id="publisher" placeholder="example: DC Comics" /></li>
+						<li><label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label><input type="range" id="rateIssue" value="0" min="0" max="5" onchange="rangeValue.value=value" /><output id="rangeValue"></output></li>
 		 				<!--Genre Dropdown Menu-->
-		 				<li id="select"><label for="genre" class="label">*Select Genre:</label></li> 
+		 				<li id="select"><label for="genre" class="label">*Genre:</label></li> 
 						<!--REPLACED so JavaScript can create the menu dynamically
 							<select id="genre">
 								<option>Superhero</option>
@@ -55,7 +55,7 @@ Term: 1208
 								<!-- Illustration Radio Buttons -->
 								<li class="illStyle"><input type="radio" id="fullColor" value="Full Color" name="illStyle" /><label for="fullColor">Full Color</label></li>
 								<li class="illStyle"><input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" /><label for="blackWhite">Black &amp; White</label></li>
-								<li class="illStyle"><input type="radio" id="combination" value="Combination" name="illStyle" /><label for="combination">Combination</label></li>
+								<li class="illStyle"><input type="radio" id="combination" value="Combination" name="illStyle" checked /><label for="combination">Combination</label></li>
 							</ul>
 						</li>
 						<!-- Comment Textarea -->

@@ -67,7 +67,7 @@ form {
 
 /* li element within ul element within div element which is dynamically created by JavaScript to display data on the addItem.html page */
 div ul li {
-    list-style-type: none;
+    list-style: none;
 }
 
 /*Horizontal line after each item*/
