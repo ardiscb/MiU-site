@@ -237,5 +237,52 @@ $('#addItem').on('pageinit', function(){
 
 });
 
-//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+$('#superhero').on('pageinit', function(){
+	//code needed for home page goes here
 
+});
+
+$('#western').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#horror').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#romance').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#scifi').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#covers').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#about').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#construction').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#dataDisplay').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#home').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
