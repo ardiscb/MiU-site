@@ -27,24 +27,6 @@ $('#addItem').on('pageinit', function(){
 	 var //comicGenre = ["--Choose A Genre--", "Superhero", "Horror", "Sci-Fi", "Western", "Romance"],
 		styleValue,
 		errMsg = e('errors');
-
-	//Select field and options populated
-	// var makeGenre = function(){
-	// 	var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags
-	// 		selectLi = e("select"),
-	// 		makeSelect = document.createElement("select");
-	// 	makeSelect.setAttribute("id", "genre");
-	// 	makeSelect.setAttribute("data-native-menu", "false");
-	// 	makeSelect.setAttribute("class", "required")
-	// 	for(var i=0, j=comicGenre.length; i<j; i++){
-	// 		var makeOption = document.createElement("option");
-	// 		var	optText = comicGenre[i];
-	// 		makeOption.setAttribute("value", optText);
-	// 		makeOption.innerHTML = optText;
-	// 		makeSelect.appendChild(makeOption);
-	// 	}
-	// 	selectLi.appendChild(makeSelect);
-	// };
 	
 	//Find value of the selected radio button for the storeData function
 	var getSelectedRadio = function(){
@@ -192,7 +174,6 @@ $('#addItem').on('pageinit', function(){
 		e('comments').value 	= item.comments[1];
 
 		//Remove the initial listener from the input 'save comic' button
-		// save.removeEventListener("click", storeData);
 		//Change Submit button value to Edit button
 		e('submit').value = "Edit Comic";
 		var editSubmit = e('submit');
@@ -237,5 +218,52 @@ $('#addItem').on('pageinit', function(){
 
 });
 
-//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+$('#superhero').on('pageinit', function(){
+	//code needed for home page goes here
 
+});
+
+$('#western').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#horror').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#romance').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#scifi').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#covers').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#about').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#construction').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#dataDisplay').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
+
+$('#home').on('pageinit', function(){
+	//code needed for home page goes here
+
+});
