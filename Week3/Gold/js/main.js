@@ -122,7 +122,7 @@ $('#addItem').on('pageinit', function(){
 	var makeItemLinks = function(key, linksLi){
 		//add edit single item link
 		var editLink = document.createElement('a');
-		editLink.href = "#";
+		editLink.href = "#addItem";
 		editLink.key = key;
 		var editText = "Edit Comic";
 		editLink.addEventListener("click", editItem);
