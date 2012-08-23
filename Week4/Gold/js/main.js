@@ -1,10 +1,16 @@
+/*
+Author: Courtney Ardis 
+Project: MiU Project 4
+Term: 1208
+*/
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 
 });	
 		
 $('#addItem').on('pageinit', function(){
-
+		delete $.validator.methods.date;
 		var myForm = $('#comicForm');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
@@ -58,7 +64,6 @@ $('#addItem').on('pageinit', function(){
 	};
 
 	var getData = function(){
-		// toggleControls("on");
 		if(localStorage.length === 0){
 			alert("There is no data in Local Storage so default data was added.");
 			autofillData();

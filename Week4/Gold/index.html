@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Author: Courtney Ardis 
-Project: MiU Project 3
+Project: MiU Project 4
 Term: 1208
 -->
 
@@ -15,7 +15,6 @@ Term: 1208
 		<meta name="keywords" content="comic books, list, keep track, add comics, store comic titles" />
 		<meta name="robots" content="noindex, nofollow" />
 		<title>Comic Book Indexer</title>
-
 		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320"/>
@@ -25,7 +24,8 @@ Term: 1208
 		<meta http-equiv="cleartype" content="on">
 		
 		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" href="themes/Theme.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
 		<link href="css/styles.css" rel="stylesheet" /> 
 		
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -36,16 +36,17 @@ Term: 1208
 	
 	<!-- SOURCE: Used Wikipedia for genre descriptions (better verbage) -->
 	<!-- Home page	 -->
-		<div data-role="page" id="home">
+		<div data-role="page" id="home" data-theme="a">
 			<!-- Header -->
-			<div data-role="header" align="center" >
+			<div data-role="header" align="center">
 				<h1>Comic Book Indexer</h1>
-				<img src="images/CTA.png" alt="CTA" />
 			</div>
 			<!-- Content -->
 			<div data-role="content">
-					
-				<div data-role="collapsible-set" data-theme="a">
+				<div align="center">
+					<img src="images/CTA.png" alt="CTA" />	
+				</div>
+				<div data-role="collapsible-set">
 					<h2>Browse</h2>
 					<!--Horror -->
 					<!-- Search feature -->
@@ -74,7 +75,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a id="link" href="#addItem">Add Comic</a></li>
@@ -89,7 +90,7 @@ Term: 1208
 
 	<!-- Horror page -->
 
-		<div data-role="page" id="horror">
+		<div data-role="page" id="horror" data-theme="a">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>Horror</h1>
@@ -104,7 +105,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
@@ -121,7 +122,7 @@ Term: 1208
 
 	<!-- Romance page -->
 
-		<div data-role="page" id="romance">
+		<div data-role="page" id="romance" data-theme="a">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>Romance</h1>
@@ -136,7 +137,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
@@ -153,7 +154,7 @@ Term: 1208
 
 	<!-- Sci-Fi page -->
 
-		<div data-role="page" id="scifi">
+		<div data-role="page" id="scifi" data-theme="a">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>Sci-Fi</h1>
@@ -168,7 +169,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
@@ -185,7 +186,7 @@ Term: 1208
 
 	<!-- Superhero page -->
 
-		<div data-role="page" id="superhero">
+		<div data-role="page" id="superhero" data-theme="a">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>Superhero</h1>
@@ -200,7 +201,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
@@ -217,7 +218,7 @@ Term: 1208
 
 	<!-- Western page -->
 
-		<div data-role="page" id="western">
+		<div data-role="page" id="western" data-theme="a">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>Sci-Fi</h1>
@@ -232,7 +233,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
@@ -249,7 +250,7 @@ Term: 1208
 	
 	<!-- Covers page -->
 
-		<div data-role="page" id="covers">
+		<div data-role="page" id="covers" data-theme="a">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>Comic Book Covers</h1>
@@ -259,7 +260,7 @@ Term: 1208
 			<!-- Thumbnail Grid -->
 			<div data-role="content">
 				<div class="ui-grid-b">
-					<div class="ui-block-a">
+				<div class="ui-block-a">
 						<img src="images/youngromance1.jpg" alt="cover" />
 					</div>
 					<div class="ui-block-b">
@@ -315,7 +316,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
@@ -332,7 +333,7 @@ Term: 1208
 
 	<!-- About page -->
 
-		<div data-role="page" id="about">
+		<div data-role="page" id="about" data-theme="a">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>About the Creator</h1>
@@ -344,7 +345,7 @@ Term: 1208
 				</p>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
@@ -360,7 +361,7 @@ Term: 1208
 	<!-- End About page -->
 
 	<!-- Add Item page -->
-	<div data-role="page" id="addItem">
+	<div data-role="page" id="addItem" data-theme="a">
 		<!-- Header -->
 		<div data-role="header" align="center" data-position="fixed">
 			<h1 id="addComic">Add Comic</h1>			
@@ -395,12 +396,12 @@ Term: 1208
 						</div>
 						<div data-role="fieldcontain">
 							<label for="rateIssue" class="label">Rate Issue (Scale 0-5):</label>
-							<input type="range" id="rateIssue" value="3" min="0" max="5" data-theme="b" />
+							<input type="range" id="rateIssue" value="3" min="0" max="5" data-theme="a" />
 						</div>
 		 				<!--Genre Dropdown Menu-->
 		 				<div data-role="fieldcontain" id="select">
 		 					<label for="genre" class="label">*Genre:</label>
-		 					<select id="genre" data-theme="b">
+		 					<select id="genre" data-theme="a">
 		 						<option>--Choose A Genre--</option>
 								<option>Superhero</option>
 								<option>Horror</option>
@@ -414,15 +415,15 @@ Term: 1208
 								<legend>Illustration Style:</legend>
 								<!-- Illustration Radio Buttons -->
 								<div>
-									<input type="radio" id="fullColor" value="Full Color" name="illStyle" data-theme="b" checked/>
+									<input type="radio" id="fullColor" value="Full Color" name="illStyle" data-theme="a" checked/>
 									<label for="fullColor">Full Color</label>
 								</div>
 								<div>
-									<input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" data-theme="b" />
+									<input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" data-theme="a" />
 									<label for="blackWhite">Black &amp; White</label>
 								</div>
 								<div>
-									<input type="radio" id="combination" value="Combination" name="illStyle" data-theme="b" />
+									<input type="radio" id="combination" value="Combination" name="illStyle" data-theme="a" />
 									<label for="combination">Combination</label>
 								</div>
 							</fieldset>
@@ -435,13 +436,13 @@ Term: 1208
 					</div>		
 				<!-- Submit Elements -->
 				<div data-role="fieldcontain">		
-					<input type="submit" data-role="button" class="button" data-theme="b" value="Add Comic" id="submit" data-inline="true" />
+					<input type="submit" data-role="button" class="button" data-theme="a" value="Add Comic" id="submit" data-inline="true" />
 					<span> | </span>
 					<a href="#" class="button" data-theme="a" value="Clear All" id="reset" data-inline="true">Clear All</a>
 				</div>
 			</form>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<!-- Local Storage Nav Elements -->
@@ -460,7 +461,7 @@ Term: 1208
 
 	<!-- Display Data page -->
 
-	<div data-role="page" id="dataDisplay">
+	<div data-role="page" id="dataDisplay" data-theme="a">
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" align="center">
 			<h4>Saved Comics</h4>
@@ -491,18 +492,23 @@ Term: 1208
 
 	<!-- Construction page -->
 
-		<div data-role="page" id="construction">
+		<div data-role="page" id="construction" data-theme="a">
 			<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
-				<img src="images/error.png" alt="Orange triangle with an exclamation mark in the middle" />
+				<!-- When Browse pages work add data-rel="back" instead of href-->
+				<a href="index.html" data-icon="back">Back</a>
+				<h4>Oops!</h4>
 			</div>
 
 			<!-- Content -->
 			<div data-role="content">
+				<div align="center">
+					<img src="images/error.png" alt="Orange triangle with an exclamation mark in the middle" />
+				</div>
 				<p>This page is under construction. We apologize for any inconvenience this may cause you. </p>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<!-- Nav Bar -->
 				<div data-role="navbar">
 					<ul>
