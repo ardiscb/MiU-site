@@ -15,7 +15,7 @@ Term: 1208
 
 /* body element on both the index.html and addItem.hmtl page */
 body{
-	background-color: #999;
+	background: url(../images/backgroundLines.png);
 	letter-spacing: .07em;
 	word-wrap: break-word;
 	line-height: 25px;
