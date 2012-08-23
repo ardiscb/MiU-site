@@ -21,7 +21,8 @@ Term: 1208
 		<meta http-equiv="cleartype" content="on">
 		
 		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" href="themes/Theme.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
 		<link href="css/styles.css" rel="stylesheet" />
 		
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -31,14 +32,16 @@ Term: 1208
 	<body>
 
 		<!-- Home page	-->
-		<div data-role="page" id="home">
+		<div data-role="page" id="home" data-theme="b">
 			<!-- Header -->
 			<div data-role="header" align="center" >
 				<h1>Comic Book Indexer</h1>
-				<img src="images/CTA.png" alt="CTA" />
 			</div>
 			<!-- Content -->
 			<div data-role="content">
+				<div align="center">
+					<img src="images/CTA.png" alt="CTA" />
+				</div>
 				<div data-role="collapsible-set" data-theme="a">
 					<h2>Browse</h2>
 					<!--Horror -->
@@ -74,7 +77,7 @@ Term: 1208
 				</div>
 			</div>
 			<!-- Footer -->
-			<div data-role="footer" data-position="fixed" data-id="bronze">
+			<div data-role="footer" data-position="fixed" data-id="bronze" data-theme="a">
 				<div data-role="navbar">
 					<ul>
 						<li><a id="link" href="addItem.html" data-ajax="false">Add Comic</a></li>
@@ -93,7 +96,7 @@ Term: 1208
 	
 	<!-- Newstream page -->
 
-		<div data-role="page" id="newstream">
+		<div data-role="page" id="newstream" data-theme="b">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>Comic Newstream</h1>
@@ -184,7 +187,7 @@ Term: 1208
 
 	<!-- About page -->
 
-		<div data-role="page" id="about">
+		<div data-role="page" id="about" data-theme="b">
 		<!-- Header -->
 			<div data-role="header" data-position="fixed" align="center">
 				<h1>About the Creator</h1>
